@@ -1,0 +1,74 @@
+@charset 'UTF-8';
+.form_box{
+    margin-top: 0.2rem;
+    @include border_1px;
+    border-top-width: 1px;
+}
+.input_module{
+    @include flexbox;
+    @include vertical-layout(center);
+    @include border_1px;
+    border-bottom-width: 1px;
+    height: 0.90rem;
+    background: #fff;
+    padding:1px 0.20rem;
+    .left{
+        font-size:0.36rem;
+    }
+    .input_box{
+        @include flex(1);
+        input{
+            @include box-sizing(border-box);
+            width: 100%;
+            line-height:1.3;
+            padding:0.20rem;
+        }
+        select{
+            @include box-sizing(border-box);
+            width: 100%;
+            line-height:1.3;
+            padding:0.20rem;
+            background:#fff;
+        }
+    }
+    .code{
+        display:inline-block;
+        border:1px solid $main_g;
+        width: 1.80rem;
+        text-align:center;
+        line-height:0.40rem;
+        color:$main_g;
+    }
+    .right{
+        i{
+            font-size:0.36rem;
+        }
+    }
+}
+
+.read_box{
+    padding:0.20rem;
+    input{
+        vertical-align:middle;
+    }
+    a{
+        vertical-align:middle;
+        text-decoration: underline;
+        font-size:0.24rem;
+        color:#000;
+    }
+}
+.btn_box{
+    padding: 0.20rem;
+}
+.submit{
+    @include border-radius(0.10rem);
+    width: 100%;
+    background:#b4b4b4;
+    text-align:center;
+    line-height:0.60rem;
+    color:#fff;
+    &.read{
+        background:$main_g;
+    }
+}

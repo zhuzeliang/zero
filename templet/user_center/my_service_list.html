@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>我的服务-已预约</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta content="yes" name="apple-mobile-web-app-capable" />
+    <meta content="black" name="apple-mobile-web-app-status-bar-style" />
+    <meta content="telephone=no" name="format-detection" />
+    <meta content="email=no" name="format-detection" />
+    <link rel="stylesheet" href="../../css/my_service_list.css">
+    <script src="../../js/rem.js"></script>
+</head>
+<body onload="loadFun();">
+    <!-- 页面加载中start -->
+    <div class="my_loading">
+        <img src="../../images/gaox.gif" alt="">
+    </div>
+    <!-- 页面加载中end -->
+	<!-- 头部 start-->
+    <div class="header">
+        <header>
+            <div class="back" onclick="history.go(-1);">
+                <i class="icon iconfont down">&#xe6dc;</i>
+            </div>
+            <div class="nav_list">
+                <a href="###" class="nav">我的服务</a>
+            </div>
+        </header>
+    </div>
+    <!-- 头部 end-->
+    <!-- 门店排序start -->
+    <div class="sort_list">
+        <a href="###" class="sort"><span>待使用</span></a>
+        <a href="###" class="sort current"><span>已完成</span></a>
+        <a href="###" class="sort"><span>已退款</span></a>
+    </div>
+    <!-- 门店排序end-->
+	<div class="container">
+        <!-- 订单列表start -->
+		<div class="order_list">
+            <div class="order">
+                <div class="order_num line">
+                    <div class="left">
+                        <label for="">订单号：</label>
+                        <span>123456789000</span>
+                    </div>
+                    <div class="right">
+                        <label for="">订单状态：</label>
+                        <span>已完成</span>
+                    </div>
+                </div>
+                 <div class="order_type line">
+                    <div class="left">
+                        <span>亲子互动益智套餐</span>
+                    </div>
+                    <div class="right">
+                        <span class="money">¥226.0</span>
+                    </div>
+                </div>
+                 <div class="order_time line">
+                    <div class="left">
+                        <label for="">下单时间：</label>
+                        <span>123456789000</span>
+                    </div>
+                    <div class="right">
+                        <a href="../user_center/my_service_detail.html" class="link detail">订单详情</a>
+                        <a href="../user_center/refund.html"  class="link applay">申请退款</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="order">
+                <div class="order_num line">
+                    <div class="left">
+                        <label for="">订单号：</label>
+                        <span>123456789000</span>
+                    </div>
+                    <div class="right">
+                        <label for="">订单状态：</label>
+                        <span>待使用</span>
+                    </div>
+                </div>
+                 <div class="order_type line">
+                    <div class="left">
+                        <span>亲子互动益智套餐</span>
+                    </div>
+                    <div class="right">
+                        <span class="money">¥226.0</span>
+                    </div>
+                </div>
+                 <div class="order_time line">
+                    <div class="left">
+                        <label for="">下单时间：</label>
+                        <span>123456789000</span>
+                    </div>
+                    <div class="right">
+                        <a href="../user_center/my_service_detail.html" class="link detail">订单详情</a>
+                        <a href="###"  class="link no_applay">申请退款</a>
+                    </div>
+                </div>
+            </div>
+
+             <div class="order">
+                <div class="order_num line">
+                    <div class="left">
+                        <label for="">订单号：</label>
+                        <span>123456789000</span>
+                    </div>
+                    <div class="right">
+                        <label for="">订单状态：</label>
+                        <span>已退款</span>
+                    </div>
+                </div>
+                 <div class="order_type line">
+                    <div class="left">
+                        <span>亲子互动益智套餐</span>
+                    </div>
+                    <div class="right">
+                        <span class="money">¥226.0</span>
+                    </div>
+                </div>
+                 <div class="order_time line">
+                    <div class="left">
+                        <label for="">下单时间：</label>
+                        <span>123456789000</span>
+                    </div>
+                    <div class="right">
+                        <a href="../user_center/my_service_detail.html" class="link detail">订单详情</a>
+                        <a href="###"  class="link no_applay ">申请退款</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 订单列表 end-->
+	</div>
+</body>
+</html>
+<script src="../../js/jquery-2.1.4.min.js"></script>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>退款申请</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta content="yes" name="apple-mobile-web-app-capable" />
+    <meta content="black" name="apple-mobile-web-app-status-bar-style" />
+    <meta content="telephone=no" name="format-detection" />
+    <meta content="email=no" name="format-detection" />
+    <link rel="stylesheet" href="../../css/refund.css">
+    <script src="../../js/rem.js"></script>
+</head>
+<body onload="loadFun();">
+    <!-- 页面加载中start -->
+    <div class="my_loading">
+        <img src="../../images/gaox.gif" alt="">
+    </div>
+    <!-- 页面加载中end -->
+    <!-- 头部 start-->
+    <div class="header">
+        <header>
+            <div class="back" onclick="history.go(-1);">
+                <i class="icon iconfont down">&#xe6dc;</i>
+            </div>
+            <div class="nav_list">
+                <a href="###" class="nav">退款申请</a>
+            </div>
+        </header>
+    </div>
+    <!-- 头部 end-->
+    <div class="container">
+       <!--  if else-->
+        <p class="tips">
+            该订单为第三方平台支付订单，我们将在申请退款后的三个工作日审核并退回该订单的实际支付金额至您的原支付账户。
+        </p>
+       <!--  <p class="tips">
+            该订单为趣豆支付订单，我们将在申请退款后的三个工作日审核并退回该订单的实际支付趣豆数额至您的账户。
+        </p> -->
+        <div class="cell">
+            <label for="">订单号：</label>
+            <span>1243564889995</span>
+        </div>
+        <div class="cell">
+            <label for="">下单时间：</label>
+            <span>2016-10-10 18:00</span>
+        </div>
+        <div class="cell">
+            <label for="">实付金额：</label>
+            <!--  if else-->
+            <span class="money">¥5000</span>
+            <!-- <span class="dou"><i class="icon iconfont down">&#xe645; </i>665</span> -->
+        </div>
+        <div class="cell">
+            <label for="">退款金额：</label>
+            <!--  if else-->
+            <span class="money">¥5000</span>
+           <!--  <span class="dou"><i class="icon iconfont down">&#xe645; </i>665</span> -->
+        </div>
+
+
+
+
+    </div>
+       <!-- 底部导航start -->
+    <div class="footer">
+        <footer>
+            <a href="###" class="pay" onclick="fun1();">
+                <span>提交</span>
+            </a>
+        </footer>
+    </div>
+    <!-- 底部导航end -->
+</body>
+</html>
+<script src="../../js/jquery-2.1.4.min.js"></script>
+<script src="../../js/layer.js"></script>
+<script>
+    //询问框
+    function fun1(){
+        var html='<p style="text-align:center;">退款申请提交成功</p>';
+        layer.open({
+            content: html,
+            btn: ['确定'],
+            yes:function(){
+                // 点确定事件
+                window.location.href="../user_center/my_service_list.html";
+            }
+        });
+    }
+
+</script>

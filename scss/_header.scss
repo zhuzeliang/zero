@@ -1,0 +1,48 @@
+@charset "UTF-8";
+@import "mixins";
+@import "mixins";
+@import  "variable";
+.header{
+    @include border_1px;
+    border-bottom-width:1px;
+    position: absolute;
+    top:0;
+    left:0;
+    width: 100%;
+    background: #fff;
+    z-index: 2;
+}
+header{
+    @include flexbox;
+    @include vertical-layout(center);
+    position: relative;
+    height: 1.0rem;
+    .city_box{
+        width: 1.0rem;
+        position: relative;
+        padding-right:0.30rem;
+        margin-right:0.30rem;
+        display:block;
+        color:#000;
+        font-size:0.30rem;
+        .city{
+            @include clamp(1);
+            text-align:right;
+            line-height: 1.3;
+        }
+        .down{
+            position: absolute;
+            right:0;
+            display:block;
+            line-height: 0.30rem;
+            top:50%;
+            margin-top:-0.15rem;
+        }
+    }
+    .header_title{
+        @include flex(1);
+        text-align:center;
+        margin-left:-1.60rem;
+        font-size:0.36rem;
+    }
+}

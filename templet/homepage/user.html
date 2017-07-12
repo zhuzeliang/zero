@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta content="yes" name="apple-mobile-web-app-capable" />
+    <meta content="black" name="apple-mobile-web-app-status-bar-style" />
+    <meta content="telephone=no" name="format-detection" />
+    <meta content="email=no" name="format-detection" />
+    <link rel="stylesheet" href="../../css/user.css">
+    <script src="../../js/rem.js"></script>
+	<title>个人中心</title>
+</head>
+<body onload="loadFun();">
+	<!-- 页面加载中start -->
+	<div class="my_loading">
+		<img src="../../images/gaox.gif" alt="">
+	</div>
+	<!-- 页面加载中end -->
+	<div class="container">
+		
+		<!-- 个人中心头部 start-->
+		<div class="user_header">
+			<div class="top_box">
+				<a href="../info/info_list.html" class="left">
+					<i class="icon iconfont">&#xe64b;</i>
+					<span class="circle"></span>
+				</a>
+				<a href="../user_center/set.html" class="right">
+					<i class="icon iconfont">&#xe651;</i>
+				</a>
+			</div>
+			
+			<div class="user_img">
+				<div class="img_box">
+					<img src="../../images/hser_header.png" alt="">
+					<div class="sex_img">
+						<!-- 男性 -->
+						<i class="icon iconfont">&#xe60e;</i>
+						<!-- 女性 -->
+						<!-- <i class="icon iconfont">&#xe683;</i> -->
+					</div>
+				</div>
+			</div>
+			<div class="name_box">
+				<span class="user_name">匿名用户201234555</span>
+				<a href="../user_center/user_info.html"><i class="icon iconfont">&#xe612;</i></a>
+			</div>
+			<div class="dou_box">
+				<i class="icon iconfont">&#xe645;</i>
+				<label for="">趣豆:</label>
+				<a href="../user_center/my_dou.html" class="num">90000</a>
+			</div>
+			<div class="link">
+				<a href="../user_center/recharge.html">充值</a>
+			</div>
+		</div>
+		<!-- 个人中心头部 end-->
+
+		<!-- 个人服务 start-->
+		<div class="my_list">
+			<a href="../user_center/my_service_list.html" class="mine">
+				<i class="icon iconfont">&#xe64e;</i>
+				<p>我的服务</p>
+			</a>
+			<a href="../user_center/coupon.html"  class="mine">
+				<i class="icon iconfont">&#xe609;</i>
+				<p>优惠劵</p>
+			</a>
+			<a href="../user_center/discovery.html"  class="mine">
+				<i class="icon iconfont">&#xe67e;</i>
+				<p>我的发现</p>
+			</a>
+			<a href="###"  class="mine" onclick="fun1();">
+				<i class="icon iconfont">&#xe76a;</i>
+				<p>客服</p>
+			</a>
+		</div>
+		<!-- 个人服务 end-->
+
+		<!-- 待使用服务列表start -->
+
+		<div class="wait_title">
+			<h3>待使用服务</h3>
+		</div>
+		<div class="wait_service_list">
+			<div class="wait_service">
+				<a href="../health_check/service_detail.html" class="left">
+					<h4><span>亲子互动益智套餐</span><i class="icon iconfont">&#xe608;</i></h4>
+					<h5>成长中心徐家汇店</h5>
+				</a>
+				<a href="../user_center/test_key.html" class="right check">
+					<img src="../../images/watch.png" alt="">
+				</a>
+			</div>
+			<div class="wait_service">
+				<div class="left">
+					<h4><a href="../service_pack/service_pack_detail.html"><span>家有萌宠套餐</span><i class="icon iconfont">&#xe608;</i></a></h4>
+					<h5>共2项</h5>
+					<div class="detail_list">
+						<div class="detail">
+							<div class="detail_left">
+								<a  href="../user_center/my_service_detail.html" class="goods_left">萌宠美容美发1次卡(剩1次)</a>
+								<a href="../user_center/store_list.html" class="goods_right"><i class="icon iconfont">&#xe606;</i><span>8</span></a>
+							</div>
+							<a href="../order/service_append2.html" class="detail_right">
+								<img src="../../images/appoint.png" alt="">
+							</a>
+						</div>
+						<div class="detail">
+							<div class="detail_left">
+								<a  href="../user_center/my_service_detail.html" class="goods_left">萌宠健康护理1次卡(剩1次)</a>
+								<a href="../user_center/store_list.html"  class="goods_right"><i class="icon iconfont">&#xe606;</i><span>8</span></a>
+							</div>
+							<a href="../user_center/test_key.html" class="detail_right">
+								<img src="../../images/watch.png" alt="">
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- 待使用服务列表end -->
+	</div>
+
+	<!-- 底部导航start -->
+	<div class="footer">
+		<footer>
+			<a href="index.html">
+				<i class="icon iconfont">&#xe601;</i>
+				<p>首页</p>
+			</a>
+			<a href="service_pack.html">
+				<i class="icon iconfont">&#xe632;</i>
+				<p>服务包</p>
+			</a>
+			<a href="discovery.html">
+				<i class="icon iconfont">&#xe67e;</i>
+				<p>发现</p>
+			</a>
+			<a href="user.html"  class="current">
+				<i class="icon iconfont">&#xe65c;</i>
+				<p>我的</p>
+			</a>
+		</footer>
+	</div>
+	<!-- 底部导航end -->
+
+
+</body>
+</html>
+<script src="../../js/jquery-2.1.4.min.js"></script>
+<script src="../../js/layer.js"></script>
+<script>
+	   //客服电话弹窗
+    function fun1(){
+        var html='<p style="text-align:center;">拨打电话40080012332</p>';
+        layer.open({
+            content: html,
+            btn: ['确定','取消'],
+            yes:function(){
+            	window.location.href="tel:400800123456";
+            }
+        });
+    }
+</script>

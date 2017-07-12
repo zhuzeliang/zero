@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta content="yes" name="apple-mobile-web-app-capable" />
+    <meta content="black" name="apple-mobile-web-app-status-bar-style" />
+    <meta content="telephone=no" name="format-detection" />
+    <meta content="email=no" name="format-detection" />
+    <link rel="stylesheet" href="../../css/service_append.css">
+    <title>服务预约</title>
+    <script src="../../js/rem.js"></script>
+</head>
+
+<body onload="loadFun();">
+    <!-- 页面加载中start -->
+    <div class="my_loading">
+        <img src="../../images/gaox.gif" alt="">
+    </div>
+    <!-- 页面加载中end -->
+	<!-- 头部 start-->
+    <div class="header">
+        <header>
+            <div class="back" onclick="history.go(-1);">
+                <i class="icon iconfont down">&#xe6dc;</i>
+            </div>
+            <div class="nav_list">
+                <a href="###" class="nav">服务预约</a>
+            </div>
+        </header>
+    </div>
+    <!-- 头部 end-->
+   <div class="container">
+        <div class="detail">
+            <div class="left">
+                <h3>亲子互动益智套餐</h3>
+                <h4><img src="../../images/address1.png" alt=""><span>成长中心徐家汇店</span></h4>
+            </div>
+            <div class="right">
+                <span>¥199.0</span>
+            </div>
+        </div>
+        <div class="title">
+            今天
+            <span>2017-12-27</span>
+        </div>
+        <div class="date_box">
+            <div class="month_box">
+                <span>
+                    <i class="icon iconfont down">&#xe6dc;</i>
+                    <span class="month">2017年3月</span>
+                    <i class="icon iconfont down">&#xe6da;</i>
+                </span>
+            </div>
+            <table>
+                <thead>
+                    <tr>
+                        <td>日</td>
+                        <td>一</td>
+                        <td>二</td>
+                        <td>三</td>
+                        <td>四</td>
+                        <td>五</td>
+                        <td>六</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><p class="date">12</p><p class="tip">休息</p></td>
+                        <td class="no_append"><p class="date">13</p><p class="tip">约满</p></td>
+                        <td class="no_append"><p class="date">14</p><p class="tip">约满</p></td>
+                        <td class="no_append"><p class="date now">15</p><p class="tip">约满</p></td>
+                        <td class="no_append"><p class="date">16</p><p class="tip">约满</p></td>
+                        <td class="no_append"><p class="date">17</p><p class="tip">约满</p></td>
+                        <td class="no_append"><p class="date">18</p><p class="tip">休息</p></td>
+                    </tr>
+                     <tr>
+                        <td class="no_append"><p class="date">12</p><p class="tip">休息</p></td>
+                        <td><p class="date">13</p><p class="tip"></p></td>
+                        <td><p class="date">14</p><p class="tip"></p></td>
+                        <td><p class="date">15</p><p class="tip"></p></td>
+                        <td><p class="date">16</p><p class="tip"></p></td>
+                        <td><p class="date">17</p><p class="tip"></p></td>
+                        <td class="no_append"><p class="date">18</p><p class="tip">休息</p></td>
+                    </tr>
+                     <tr>
+                        <td class="no_append"><p class="date">12</p><p class="tip">休息</p></td>
+                        <td><p class="date">13</p><p class="tip"></p></td>
+                        <td><p class="date">14</p><p class="tip"></p></td>
+                        <td><p class="date">15</p><p class="tip"></p></td>
+                        <td><p class="date">16</p><p class="tip"></p></td>
+                        <td><p class="date">17</p><p class="tip"></p></td>
+                        <td class="no_append"><p class="date">18</p><p class="tip">休息</p></td>
+                    </tr>
+                    <tr>
+                        <td class="no_append"><p class="date">12</p><p class="tip">休息</p></td>
+                        <td><p class="date">13</p><p class="tip"></p></td>
+                        <td><p class="date">14</p><p class="tip"></p></td>
+                        <td><p class="date">15</p><p class="tip"></p></td>
+                        <td><p class="date">16</p><p class="tip"></p></td>
+                        <td><p class="date">17</p><p class="tip"></p></td>
+                        <td class="no_append"><p class="date">18</p><p class="tip">休息</p></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="choose_box">
+            <div class="choose_date">
+                <div class="left">已选日期</div>
+                <div class="right">2017-03-28</div>
+            </div>
+        </div>
+        <div class="title">
+            预约人信息
+            <span>(为顺利预约请您仔细填写以下信息)</span>
+        </div>
+
+        <div class="form_box">
+            <form action="###">
+                <div class="input_module">
+                    <div class="left">
+                        预约人名称
+                    </div>
+                    <div class="input_box">
+                        <input type="text" placeholder="预约人姓名">
+                    </div>
+                </div>
+                <div class="input_module">
+                    <div class="left">
+                        身份证
+                    </div>
+                    <div class="input_box">
+                        <input type="text" placeholder="请输入身份证号码">
+                    </div>
+                </div>
+                <div class="input_module">
+                    <div class="left">
+                        性别
+                    </div>
+                    <div class="input_box">
+                        <input type="text" placeholder="请选择" readonly>
+                        <select name="" class="select">
+                           <option value="">请选择</option>
+                           <option value="">男</option>
+                           <option value="">女</option>
+                       </select>
+                    </div>
+                    <div class="right">
+                        <i class="icon iconfont down">&#xe6da;</i>
+                    </div>
+                </div>
+                <div class="input_module">
+                    <div class="left">
+                        出生日期
+                    </div>
+                    <div class="input_box">
+                        <input type="text" placeholder="请选择出生日期" id="date-selector-input"  readonly="readonly">
+                    </div>
+                </div>
+                <div class="input_module">
+                    <div class="left">
+                        手机号
+                    </div>
+                    <div class="input_box">
+                        <input type="text" placeholder="请输入手机号">
+                    </div>
+                </div>
+                <div class="input_module">
+                    <div class="left">
+                        婚姻状况
+                    </div>
+                    <div class="input_box" >
+                        <input type="text" placeholder="请选择" readonly>
+                        <select name="" class="select">
+                           <option value="">请选择</option>
+                           <option value="">已婚</option>
+                           <option value="">未婚</option>
+                        </select>
+                    </div>
+                    <div class="right">
+                        <i class="icon iconfont down">&#xe6da;</i>
+                    </div>
+                </div>
+            </form>
+        </div>
+
+    </div>
+
+     <!-- 底部导航start -->
+    <div class="footer">
+        <footer>
+            <a href="order_confirm.html" class="pay">
+                <span>立即预约</span>
+            </a>
+        </footer>
+    </div>
+    <!-- 底部导航end -->
+   <!--  出生日期容器 -->
+    <div id="targetContainer"></div>
+</body>
+</html>
+<script src="../../js/jquery-2.1.4.min.js"></script>
+<script src="../../js/DateSelector.js"></script>
+<script>
+    // 模拟select效果
+    $(".select").on("change",function(){
+        var $value=$(this).find("option:selected").text();
+       $(this).siblings('input').val($value);
+    });
+
+    // 出生日期
+    new DateSelector({
+        input : 'date-selector-input',//点击触发插件的input框的id
+        container : 'targetContainer',//插件插入的容器id
+        type : 0,
+        //0：不需要tab切换，自定义滑动内容，建议小于三个；
+        //1：需要tab切换，【年月日】【时分】完全展示，固定死，可设置开始年份和结束年份
+        param : [1,1,1,0,0],
+        //设置['year','month','day','hour','minute'],1为需要，0为不需要,需要连续的1
+        beginTime : [],//如空数组默认设置成1970年1月1日0时0分开始，如需要设置开始时间点，数组的值对应param参数的对应值。
+        endTime : [],//如空数组默认设置成次年12月31日23时59分结束，如需要设置结束时间点，数组的值对应param参数的对应值。
+        recentTime : [],//如不需要设置当前时间，被为空数组，如需要设置的开始的时间点，数组的值对应param参数的对应值。
+        success : function(arr){
+            // alert(arr);
+            console.log(arr);
+            var box=document.querySelector("#date-selector-input");
+            if(arr[1].toString().length===1){
+                arr[1]='0'+arr[1];
+            }
+            if(arr[2].toString().length===1){
+                arr[2]='0'+arr[2];
+            }
+            var my_date=arr[0]+"-"+arr[1]+"-"+arr[2];
+            box.value=my_date;
+        }//回调
+    });
+</script>

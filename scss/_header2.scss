@@ -1,0 +1,37 @@
+@charset "UTF-8";
+.header{
+    @include border_1px;
+    border-bottom-width:1px;
+    position: absolute;
+    top:0;
+    left:0;
+    width: 100%;
+    background: #fff;
+    z-index: 2;
+}
+header{
+    @include flexbox;
+    @include vertical-layout(center);
+    position: relative;
+    height: 1.0rem;
+    padding:0 0.20rem;
+    .back{
+        font-size:0.46rem;
+        width: 0.50rem;
+        color:#000;
+    }
+    .nav_list{
+        @include flex(1);
+        text-align:center;
+        margin-left:-0.50rem;
+        .nav{
+            display:inline-block;
+            padding:0 0.40rem;
+            font-size:0.36rem;
+            color:#000;
+            &.current{
+                color:$main_g;
+            }
+        }
+    }
+}

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta content="yes" name="apple-mobile-web-app-capable" />
+    <meta content="black" name="apple-mobile-web-app-status-bar-style" />
+    <meta content="telephone=no" name="format-detection" />
+    <meta content="email=no" name="format-detection" />
+    <link rel="stylesheet" href="../../css/reward_list.css">
+    <script src="../../js/rem.js"></script>
+	<title>悬赏</title>
+</head>
+<body onload="loadFun();">
+	<!-- 页面加载中start -->
+	<div class="my_loading">
+		<img src="../../images/gaox.gif" alt="">
+	</div>
+	<!-- 页面加载中end -->
+    <!-- 头部 end-->
+	<div class="container">
+		<div class="content">
+			<div class="header">
+				<div class="back" onclick="history.go(-1);">
+	                <i class="icon iconfont">&#xe63f;</i>
+	            </div>
+	            <a href="reward_record.html" class="over">
+	            	<span>累计完成悬赏16件</span>
+	            	<i class="icon iconfont">&#xe620;</i>
+	            </a>
+	            <div class="back"></div>
+			</div>
+
+			<div class="head_img">
+				<div class="img_box">
+					<img src="../../images/head.png" alt="">
+				</div>
+				<p class="name">匿名用户123456</p>
+			</div>
+
+			<div class="list_box">
+				<div class="title">
+					<div class="line"></div>
+					<div class="center">今日悬赏</div>
+					<div class="line"></div>
+				</div>
+				<div class="reward_list">
+					<div class="reward">
+						<a href="../reward/reward_detail.html" class="left">
+							<p class="top">
+								<span>核销1次</span>
+								<span class="dou">趣豆<em><i class="icon iconfont">&#xe645;</i>+10</em></span>
+							</p>
+							<p class="bottom">范德萨户籍科发挥核销1次</p>
+						</a>
+						<a href="###" class="right" onclick="fun1();">可领赏</a>
+					</div>
+					<div class="reward">
+						<a href="../reward/reward_detail.html" class="left">
+							<p class="top">
+								<span>核销1次</span>
+								<span class="dou">趣豆<em><i class="icon iconfont">&#xe645;</i>+10</em></span>
+							</p>
+							<p class="bottom">范德萨户籍科发挥核销1次</p>
+						</a>
+						<a href="###" class="right" onclick="fun1();">可领赏</a>
+					</div>
+					<div class="reward">
+						<a href="../reward/reward_detail.html" class="left">
+							<p class="top">
+								<span>核销1次</span>
+								<span class="dou">趣豆<em><i class="icon iconfont">&#xe645;</i>+10</em></span>
+							</p>
+							<p class="bottom">范德萨户籍科发挥核销1次</p>
+						</a>
+						<a href="###" class="right get">可领取</a>
+					</div>
+					<div class="reward">
+						<a href="../reward/reward_detail.html" class="left">
+							<p class="top">
+								<span>核销1次</span>
+								<span class="dou">趣豆<em><i class="icon iconfont">&#xe645;</i>+10</em></span>
+							</p>
+							<p class="bottom">范德萨户籍科发挥核销1次</p>
+						</a>
+						<a href="###" class="right get">可领取</a>
+					</div>
+					<div class="reward">
+						<a href="../reward/reward_detail.html" class="left">
+							<p class="top">
+								<span>核销1次</span>
+								<span class="dou">趣豆<em><i class="icon iconfont">&#xe645;</i>+10</em></span>
+							</p>
+							<p class="bottom">范德萨户籍科发挥核销1次</p>
+						</a>
+						<a href="###" class="right over">已领取</a>
+					</div>
+					<div class="reward">
+						<a href="../reward/reward_detail.html" class="left">
+							<p class="top">
+								<span>核销1次</span>
+								<span class="dou">趣豆<em><i class="icon iconfont">&#xe645;</i>+10</em></span>
+							</p>
+							<p class="bottom">范德萨户籍科发挥核销1次</p>
+						</a>
+						<a href="###" class="right over">已领取</a>
+					</div>
+				</div>
+			</div>
+
+		</div>
+	</div>
+
+</body>
+</html>
+<script src="../../js/jquery-2.1.4.min.js"></script>
+<script src="../../js/layer.js"></script>
+<script>
+	//完成悬赏提示方法
+    function fun1(){
+        var html='<p style="text-align:center;font-size:0.32rem;">恭喜您完成悬赏</p>'+
+        		 '<p style="text-align:center;color:#ff9b0b;margin-top:0.20rem;font-size:0.32rem;"><i class="icon iconfont">&#xe645;</i>+10</p>';
+        layer.open({
+            content: html,
+            btn: ['确定'],
+            yes:function(){
+               layer.closeAll();
+            }
+        });
+    }
+</script>

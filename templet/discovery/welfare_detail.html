@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta content="yes" name="apple-mobile-web-app-capable" />
+    <meta content="black" name="apple-mobile-web-app-status-bar-style" />
+    <meta content="telephone=no" name="format-detection" />
+    <meta content="email=no" name="format-detection" />
+    <link rel="stylesheet" href="../../css/service_detail.css">
+    <script src="../../js/rem.js"></script>
+	<title>服务详情</title>
+</head>
+<body onload="loadFun();">
+	<!-- 页面加载中start -->
+	<div class="my_loading">
+		<img src="../../images/gaox.gif" alt="">
+	</div>
+	<!-- 页面加载中end -->	<!-- 头部 start-->
+	<div class="header">
+		<header>
+			<div class="back" onclick="history.go(-1);">
+				<i class="icon iconfont down">&#xe6dc;</i>
+			</div>
+			<div class="nav_list">
+				<a href="###" class="nav">服务详情</a>
+			</div>
+		</header>
+	</div>
+	<!-- 头部 end-->
+	<div class="container">
+		<!-- banner图 start -->
+		<div class="banner">
+			<img src="../../images/banner.png" alt="">
+		</div>
+		<!-- banner图 end -->
+
+		<div class="meal">
+			<div class="meal_name">
+				<h3>亲子益智套餐</h3>
+			</div>
+			<div class="sub">
+				<h4><span>剩余<em>0</em>份 | 共发放20份</span></h4>
+				<p class="right"><i class="icon iconfont">&#xe79a;</i><span>剩余10天22小时56分钟</span></p>
+			</div>
+		</div>
+
+
+		<div class="module">
+			<div class="value_box">
+				<img src="../../images/dou.png" alt="">
+				<p class="dou">20趣豆兑换</p>
+				<p><label for="">价值：</label><span>¥39.0</span></p>
+
+			</div>
+		</div>
+
+
+		<div class="module">
+			<a href="###" class="address_box">
+				<img src="../../images/address.png" alt="">
+				<div class="address">
+					<p class="address_name">成长中心徐家汇店</p>
+					<p>上海市徐汇区桂林路200号2栋</p>
+				</div>
+				<span>1.2km</span>
+				<i class="icon iconfont">&#xe6da;</i>
+			</a>
+		</div>
+
+		<div class="module">
+			<h4>福利介绍</h4>
+			<p class="detail">
+				"亲子教育"是以亲缘关系为主要基础，根据我国特有的家庭状况，这种关系被扩展为所有与幼儿亲密接触的人一一看护人与幼儿之间的关系，从而形成看护人与幼儿之间的以互动为核心内容的亲子关系。所有，"亲子关系"是以爱护婴幼儿身心健康和开发潜能以及培养个性为目标，以不断
+			</p>
+		</div>
+		<div class="module">
+			<h4>兑换规则</h4>
+			<p class="detail">
+				"亲子教育"是以亲缘关系为主要基础，根据我国特有的家庭状况，这种关系被扩展为所有与幼儿亲密接触的人一一看护人与幼儿之间的关系，从而形成看护人与幼儿之间的以互动为核心内容的亲子关系。所有，"亲子关系"是以爱护婴幼儿身心健康和开发潜能以及培养个性为目标，以不断
+			</p>
+		</div>
+	</div>
+
+	<!-- 底部导航start -->
+	<div class="footer">
+		<footer>
+			<!-- 底部状态 -->
+			<!-- <a href="###" class="appoint part_in">
+				已参与
+			</a> -->
+
+			<a href="../user_center/recharge.html" class="appoint" onclick="fun1();">
+				<span>立即兑换</span> |  <span>20趣豆</span>
+			</a>
+<!-- 
+			<a href="###" class="appoint part_in">
+				<span>立即兑换</span> |  <span>趣豆不足</span>
+			</a> -->
+
+			<!-- <a href="###" class="appoint part_in">
+				已结束
+			</a> -->
+		</footer>
+	</div>
+	<!-- 底部导航end -->
+	<!-- 回到首页start -->
+	<a href="../homepage/index.html" class="fixed">
+		<i class="icon iconfont">&#xe601;</i>
+		<p>首页</p>
+	</a>
+	<!-- 回到首页end -->
+
+</body>
+</html>
+<script src="../../js/jquery-2.1.4.min.js"></script>
+<script src="../../js/layer.js"></script>
+<script>
+	   //趣豆兑换成功
+    function fun1(){
+        var html='<p style="text-align:center;color:#1abbcf;"><i class="icon iconfont" style="font-size:0.50rem;vertical-align:middle;">&#xe614;</i> 兑换成功</p>';
+        layer.open({
+            content: html,
+            btn: ['确定'],
+        });
+    }
+</script>

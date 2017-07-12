@@ -1,0 +1,52 @@
+@charset "UTF-8";
+@import "mixins";
+@import "mixins";
+@import  "variable";
+.footer{
+	@include border_1px;
+	position: absolute;
+	bottom:0;
+	left:0;
+	width: 100%;
+	border-top-width:1px;
+	z-index: 2;
+	background: #fff;
+}
+footer{
+	@include flexbox;
+	a{
+		@include flexbox;
+		@include vertical;
+		@include flex(1);
+		@include vertical-layout(center);
+		@include horizontal-layout(center);
+		height: 1.0rem;
+		width: 0;
+		color:#000;
+		i{
+			font-size: 0.42rem;
+		}
+		p{
+			margin-top:0.08rem;
+		}
+		&.current{
+			color:$main_g;
+		}
+		&.pay{
+			background:$main_g;
+			color:#fff;
+		}
+		&.get{
+			background:$main_r;
+			color:#fff;
+		}
+		&.get{
+			background:$main_g;
+			color:#fff;
+		}
+		&.receive{
+			background:$main_r;
+			color:#fff;
+		}
+	}
+}

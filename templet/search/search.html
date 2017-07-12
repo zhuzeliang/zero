@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta content="yes" name="apple-mobile-web-app-capable" />
+    <meta content="black" name="apple-mobile-web-app-status-bar-style" />
+    <meta content="telephone=no" name="format-detection" />
+    <meta content="email=no" name="format-detection" />
+    <link rel="stylesheet" href="../../css/search.css">
+    <script src="../../js/rem.js"></script>
+	<title>搜索结果</title>
+</head>
+<body onload="loadFun();">
+	<!-- 页面加载中start -->
+	<div class="my_loading">
+		<img src="../../images/gaox.gif" alt="">
+	</div>
+	<!-- 页面加载中end -->
+	<!-- 头部 start-->
+	<div class="header">
+		<header>
+			<div class="back" onclick="history.go(-1);">
+				<i class="icon iconfont down">&#xe6dc;</i>
+			</div>
+			<div class="nav_list">
+				<a href="###" class="nav">搜索结果</a>
+			</div>
+		</header>
+	</div>
+	<!-- 头部 end-->
+	<!-- 门店排序end-->
+	<!-- 服务内容start -->
+	<div class="container">
+		<!-- 服务产品 start-->
+		<div class="service_list">
+
+			<a href="../health_check/service_detail.html" class="service">
+				<div class="left_img">
+					<img src="../../images/goods.png" alt="">
+				</div>
+				<div class="right_txt">
+					<div class="main_title">
+						<h3>全民健康月子套餐全民健康月子套餐全民健康月子套餐</h3>
+						<div class="sales_num">已售199</div>
+					</div>
+					<h4>全民健康月子套餐，全民健康月子套餐全民健康月子套餐全民健康月子套餐全民健康月子套餐全民健康月子套餐全民健康月子套餐</h4>
+					<div class="span_list">
+						<span>量身定制</span>
+						<span>特价产品</span>
+					</div>
+					<div class="price_box">
+						<div class="start">
+							<span class="price">¥100.0</span>
+							<span>/</span>
+							<span class="dou"><i class="icon iconfont">&#xe645;</i>90</span>
+						</div>
+						<div class="store_price">
+							<label for="">门店价<span>¥199.0</span></label>
+						</div>
+					</div>
+
+					<div class="hospital">
+						<div class="left">
+							<i class="icon iconfont down">&#xe60b;</i>
+							<span>成长中心徐家汇店</span>
+						</div>
+						<div class="right">
+							距离2.2km
+						</div>
+					</div>
+				</div>
+			</a>
+
+			<a href="../health_check/service_detail.html" class="service">
+				<div class="left_img">
+					<img src="../../images/goods.png" alt="">
+				</div>
+				<div class="right_txt">
+					<div class="main_title">
+						<h3>全民健康月子套餐全民健康月子套餐全民健康月子套餐</h3>
+						<div class="sales_num">已售199</div>
+					</div>
+					<h4>全民健康月子套餐，全民健康月子套餐全民健康月子套餐全民健康月子套餐全民健康月子套餐全民健康月子套餐全民健康月子套餐</h4>
+					<div class="span_list">
+						<span>量身定制</span>
+						<span>特价产品</span>
+					</div>
+					<div class="price_box">
+						<div class="start">
+							<span class="price">¥100.0</span>
+							<span>/</span>
+							<span class="dou"><i class="icon iconfont">&#xe645;</i>90</span>
+						</div>
+						<div class="store_price">
+							<label for="">门店价<span>¥199.0</span></label>
+						</div>
+					</div>
+
+					<div class="hospital">
+						<div class="left">
+							<i class="icon iconfont down">&#xe60b;</i>
+							<span>成长中心徐家汇店</span>
+						</div>
+						<div class="right">
+							距离2.2km
+						</div>
+					</div>
+				</div>
+			</a>
+		</div>
+		<!-- 服务产品 end-->
+	</div>
+
+
+</body>
+</html>
+<script src="../../js/jquery-2.1.4.min.js"></script>
+<script>
+	// tab切换效果  不要自行删除
+	$(".nav_list .nav").on("click",function(){
+		var index=$(this).index();
+		$(this).addClass("current").siblings().removeClass("current");
+		$(".sort_list").eq(index).show().siblings(".sort_list").hide();
+		$(".container").eq(index).show().siblings(".container").hide();
+	});
+
+	// sort切换效果
+	$(".hospital .sort").on("click",function(e){
+		e.stopPropagation();
+		var $index=$(this).index();
+		if($(this).hasClass('current')){
+			$(".big_layer").hide();
+			$(this).removeClass('current').siblings(".sort").removeClass('current');
+			$(".tab_box").hide();
+		}else{
+			$(".big_layer").show();
+			$(this).addClass('current').siblings(".sort").removeClass('current');
+			$(".tab_box").eq($index).show().siblings('.tab_box').hide();
+		}
+	});
+	// .tab_box .left_list a切换效果
+	$(".tab_box .left_list a").on("click",function(e){
+		e.stopPropagation();
+		var $index=$(this).index();
+		$(this).addClass('current').siblings('a').removeClass('current');
+	})
+	// 点击document弹窗消失效果
+	$(document).on("click",function(){
+		$(".hospital .sort").removeClass('current');
+		$(".big_layer").hide();
+		$(".tab_box").hide();
+	})
+</script>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+    <title>城市选择</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta content="yes" name="apple-mobile-web-app-capable" />
+    <meta content="black" name="apple-mobile-web-app-status-bar-style" />
+    <meta content="telephone=no" name="format-detection" />
+    <meta content="email=no" name="format-detection" />
+    <link rel="stylesheet" href="../../css/city.css">
+    <script src="../../js/rem.js"></script>
+</head>
+<body onload="loadFun();">
+  <!-- 页面加载中start -->
+  <div class="my_loading">
+    <img src="../../images/gaox.gif" alt="">
+  </div>
+  <!-- 页面加载中end -->
+	<!-- 头部 start-->
+    <div class="header">
+        <header>
+            <div class="back" onclick="history.go(-1);">
+                <i class="icon iconfont down">&#xe6dc;</i>
+            </div>
+            <div class="nav_list">
+                <a href="###" class="nav">城市选择</a>
+            </div>
+        </header>
+    </div>
+    <!-- 头部 end-->
+
+   <!--  表单 start -->
+   <div class="container">
+       
+       <div class="loaction">
+         <img src="../../images/address1.png" alt="">
+         <label for="">自动定位：</label>
+         <span class="error">定位失败</span>
+       </div>
+
+       <div class="city_box">
+         <h3>热门城市：</h3>
+          <div class="city_list">
+            <a href="../homepage/index.html">北京</a>
+            <a href="../homepage/service_pack.html">上海</a>
+            <a href="###">成都</a>
+            <a href="###">深圳</a>
+            <a href="###">杭州</a>
+            <a href="###">合肥</a>
+          </div>
+       </div>
+       <div class="city_box">
+         <div class="word">
+           <span>A</span>
+           <div class="line"></div>
+         </div>
+          <div class="city_list">
+            <a href="###">北京</a>
+            <a href="###">上海</a>
+            <a href="###">成都</a>
+            <a href="###">深圳</a>
+            <a href="###">杭州</a>
+            <a href="###">合肥</a>
+            <a href="###">成都</a>
+            <a href="###">深圳</a>
+            <a href="###">杭州</a>
+            <a href="###">合肥</a>
+          </div>
+       </div>
+       <div class="city_box">
+         <div class="word">
+           <span>B</span>
+           <div class="line"></div>
+         </div>
+          <div class="city_list">
+            <a href="###">北京</a>
+            <a href="###">上海</a>
+            <a href="###">成都</a>
+            <a href="###">深圳</a>
+            <a href="###">杭州</a>
+            <a href="###">合肥</a>
+          </div>
+       </div>
+    </div>
+    <!--  表单 end -->
+</body>
+</html>
+<script src="../../js/jquery-2.1.4.min.js"></script>

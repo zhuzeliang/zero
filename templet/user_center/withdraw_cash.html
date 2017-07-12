@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>提现</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta content="yes" name="apple-mobile-web-app-capable" />
+    <meta content="black" name="apple-mobile-web-app-status-bar-style" />
+    <meta content="telephone=no" name="format-detection" />
+    <meta content="email=no" name="format-detection" />
+    <link rel="stylesheet" href="../../css/withdraw_cash.css">
+    <script src="../../js/rem.js"></script>
+</head>
+<body onload="loadFun();">
+  <!-- 页面加载中start -->
+  <div class="my_loading">
+    <img src="../../images/gaox.gif" alt="">
+  </div>
+  <!-- 页面加载中end -->
+    <!-- 头部 start-->
+    <div class="header">
+        <header>
+            <div class="back" onclick="history.go(-1);">
+                <i class="icon iconfont down">&#xe6dc;</i>
+            </div>
+            <div class="nav_list">
+                <a href="###" class="nav">提现</a>
+            </div>
+        </header>
+    </div>
+    <!-- 头部 end-->
+    <div class="container">
+         <div class="form_box">
+           <form action="###">
+                <div class="input_module">
+                   <div class="input_box">
+                       <span>我的余豆</span>
+                       <span class="dou">688</span>
+                       <span class="cash">(300可提现)</span>
+                   </div>
+               </div>
+                <h3>请输入提现数量</h3>
+                <div class="input_module">
+                   <div class="input_box">
+                       <input type="text" value="888">
+                   </div>
+                   <div class="right">
+                       <span class="money">(=¥88)</span>
+                   </div>
+               </div>
+                <h3>请选择提现渠道</h3>
+                <div class="input_module">
+                   <div class="input_box">
+                       <select name="" id="select">
+                           <option value="">银行卡</option>
+                           <option value="">支付宝</option>
+                       </select>
+                   </div>
+                   <div class="right">
+                       <i class="icon iconfont down">&#xe6da;</i>
+                   </div>
+               </div>
+                <h3>请输入账户<span>(仅支持支付宝及银行卡)</span></h3>
+                <div class="type_box">
+                    <div class="input_module">
+                       <div class="input_box">
+                           <input type="tel" placeholder="请输入银行卡号">
+                       </div>
+                   </div>
+                   <div class="input_module">
+                       <div class="input_box">
+                           <input type="tel" placeholder="请输入开户行">
+                       </div>
+                   </div>
+
+                   <div class="input_module">
+                       <div class="input_box">
+                           <input type="tel" placeholder="请输入账户名">
+                       </div>
+                   </div>
+                </div>
+                <div class="type_box" style="display: none;">
+                    <div class="input_module">
+                       <div class="input_box">
+                           <input type="text" placeholder="请输入支付宝账号">
+                       </div>
+                   </div>
+                   <div class="input_module">
+                       <div class="input_box">
+                           <input type="tel" placeholder="请输入支付宝姓名">
+                       </div>
+                   </div>
+                </div>
+                <div class="tip">
+                   <span>*我们将在3个工作日内审核并处理您的提现请求</span>
+                </div>
+           </form>
+       </div>
+
+
+    </div>
+       <!-- 底部导航start -->
+    <div class="footer">
+        <footer>
+            <a href="###" class="pay" onclick="fun1();">
+                <span>提交</span>
+            </a>
+        </footer>
+    </div>
+    <!-- 底部导航end -->
+</body>
+</html>
+<script src="../../js/jquery-2.1.4.min.js"></script>
+<script src="../../js/layer.js"></script>
+<script>
+
+    // 选择提现账号效果
+    $("#select").on("change",function(){
+        var index=$(this).get(0).selectedIndex;
+        $(".type_box").eq(index).show().siblings('.type_box').hide();
+    });
+
+     //询问框
+    function fun1(){
+        var html='<p style="text-align:center;">申请提交成功</p>';
+        layer.open({
+            content: html,
+            btn: ['确定'],
+            yes:function(){
+                // 点确定事件
+                window.location.href="../homepage/user.html";
+            }
+        });
+    }
+</script>

@@ -1,0 +1,123 @@
+@charset "UTF-8";
+@import "reset";
+@import "mixins";
+@import  "variable";
+@import "iconfont/iconfont.css";
+@import  "header2";
+@import  "footer";
+html,body{
+	background:#f8f8f8;
+	width: 100%;
+	height:100%;
+}
+.container{
+	position: absolute;
+	top:1.0rem;
+	left:0;
+	right:0;
+	bottom:1.0rem;
+	overflow:auto;
+	-webkit-overflow-scrolling:touch;
+}
+.banner{
+	height: 3.0rem;
+	padding: 0.20rem 0.20rem 0 0.20rem;
+	background:#fff;
+	img{
+		width: 100%;
+		height: 100%;
+	}
+}
+
+.detail{
+	background:#fff;
+	padding:0.20rem;
+	.line{
+		@include flexbox;
+		padding:0.10rem 0;
+		line-height: 1.4;
+		.right{
+			@include flex(1);
+			display: block;
+		}
+		.dou{
+			color:$main_y;
+		}
+	}
+}
+.module{
+	@include border_1px;
+	background:#fff;
+	font-size:0.24rem;
+	color:#828282;
+	border-top-width:1px;
+	border-bottom-width:1px;
+	margin-bottom:0.20rem;
+	padding:0.20rem;
+	line-height:1.4;
+	text-align:justify;
+	margin-top:-1px;
+	.address_box{
+		@include flexbox;
+		@include vertical-layout(center);
+		line-height:1.2;
+		font-size:0.24rem;
+		color:#828282;
+		img{
+			width: 0.39rem;
+			height: 0.49rem;
+		}
+		.address{
+			@include flex(1);
+			padding:0 0.20rem;
+			.address_name{
+				color:#000;
+				margin-bottom:0.10rem;
+			}
+		}
+		i{
+			font-size:0.36rem;
+			vertical-align:middle;
+		}
+		span{
+			vertical-align:middle;
+		}
+	}
+}
+
+.title{
+	padding:0.30rem 0.20rem;
+}
+.service{
+	@include flexbox;
+	@include vertical-layout(center);
+	@include border_1px;
+	border-top-width:1px;
+	border-bottom-width:1px;
+	background:#fff;
+	padding:0 0.20rem;
+	height: 0.80rem;
+
+	.left{
+		@include flex(1);
+		@include clamp(1);
+		position: relative;
+		padding-left: 0.20rem;
+		margin-right: 0.40rem;
+		line-height:1.3em;
+		&::before{
+			content:"\200B";
+			display:inline-block;
+			position: absolute;
+			width: 2px;
+			background:$main_g;
+			height: 100%;
+			left:0;
+			top:0;
+			margin-top:-1px;
+		}
+	}
+	.over{
+		color:$main_r;
+	}
+}

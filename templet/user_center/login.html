@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+    <title>登录</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta content="yes" name="apple-mobile-web-app-capable" />
+    <meta content="black" name="apple-mobile-web-app-status-bar-style" />
+    <meta content="telephone=no" name="format-detection" />
+    <meta content="email=no" name="format-detection" />
+    <link rel="stylesheet" href="../../css/login.css">
+    <script src="../../js/rem.js"></script>
+</head>
+<body onload="loadFun();">
+  <!-- 页面加载中start -->
+  <div class="my_loading">
+    <img src="../../images/gaox.gif" alt="">
+  </div>
+  <!-- 页面加载中end -->
+	<!-- 头部 start-->
+    <div class="header">
+        <header>
+            <div class="back" onclick="history.go(-1);">
+                <i class="icon iconfont down">&#xe6dc;</i>
+            </div>
+            <div class="nav_list">
+                <a href="###" class="nav">登录</a>
+            </div>
+        </header>
+    </div>
+    <!-- 头部 end-->
+
+   <!--  表单 start -->
+   <div class="container">
+       <div class="form_box">
+           <form action="../homepage/index.html">
+               <div class="input_module">
+                   <div class="left">
+                       <i class="icon iconfont down">&#xe65c;</i>
+                   </div>
+                   <div class="input_box">
+                       <input type="tel" placeholder="请输入手机号">
+                   </div>
+                   <div class="right">
+                       <span class="code">获取验证码</span>
+                   </div>
+               </div>
+               <div class="input_module">
+                   <div class="left">
+                       <i class="icon iconfont down">&#xe62e;</i>
+                   </div>
+                   <div class="input_box">
+                       <input type="tel" placeholder="请输入验证码">
+                   </div>
+               </div>
+
+               <div class="read_box">
+                   <input type="checkbox" class="checkbox">
+                   <a href="protocal.html">阅读并同意平台服务协议</a>
+               </div>
+
+               <div class="btn_box">
+                   <input type="submit" value="验证并登录" class="submit">
+               </div>
+           </form>
+       </div>
+    </div>
+    <!--  表单 end -->
+</body>
+</html>
+<script src="../../js/jquery-2.1.4.min.js"></script>
+<script>
+    // 是否阅读协议效果 自行添加input内容判断
+    $(".checkbox").on("change",function(){
+        if($(this).prop("checked")){
+            $(".submit").addClass('read');
+        }else{
+            $(".submit").removeClass('read');
+        }
+    });
+</script>

@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta content="yes" name="apple-mobile-web-app-capable" />
+    <meta content="black" name="apple-mobile-web-app-status-bar-style" />
+    <meta content="telephone=no" name="format-detection" />
+    <meta content="email=no" name="format-detection" />
+    <link rel="stylesheet" href="../../css/service_store.css">
+    <script src="../../js/rem.js"></script>
+	<title>门店-服务</title>
+</head>
+<body onload="loadFun();">
+	<!-- 页面加载中start -->
+	<div class="my_loading">
+		<img src="../../images/gaox.gif" alt="">
+	</div>
+	<!-- 页面加载中end -->
+	<!-- 头部 start-->
+	<div class="header">
+		<header>
+			<div class="back" onclick="history.go(-1);">
+				<i class="icon iconfont down">&#xe6dc;</i>
+			</div>
+			<div class="nav_list">
+				<a href="###" class="nav current">门店</a>
+				<a href="###" class="nav">服务</a>
+			</div>
+		</header>
+	</div>
+	<!-- 头部 end-->
+	<!-- 门店排序start -->
+	<div class="sort_list hospital">
+		<a href="###" class="sort"><span>浦东新区</span><i class="icon iconfont down">&#xe631;</i></a>
+		<a href="###" class="sort"><span>套餐类型</span><i class="icon iconfont">&#xe631;</i></a>
+		<a href="###" class="sort"><span>连锁机构</span><i class="icon iconfont">&#xe631;</i></a>
+		<a href="###" class="sort"><span>综合排序</span><i class="icon iconfont">&#xe631;</i></a>
+	</div>
+	<!-- 最大遮罩 -->
+	<div class="big_layer" style="display: none;"></div>
+	<!-- 最大遮罩 -->
+	<!-- tab切换 -->
+	<div class="tab_box" style="display: none;">
+		<div class="area_box">
+			<div class="left">
+				<ul class="left_list">
+					<h5>全上海1</h5>
+					<a href="###" class="li current">浦东新区</a>
+					<a href="###" class="li">徐汇区</a>
+					<a href="###" class="li">长宁区</a>
+					<a href="###" class="li">普陀区</a>
+					<a href="###" class="li">静安区区</a>
+					<a href="###" class="li">松江区</a>
+					<a href="###" class="li">浦东新区</a>
+					<a href="###" class="li">徐汇区</a>
+					<a href="###" class="li">长宁区</a>
+					<a href="###" class="li">普陀区</a>
+					<a href="###" class="li">静安区区</a>
+					<a href="###" class="li">松江区</a>
+					<a href="###" class="li">浦东新区</a>
+					<a href="###" class="li">徐汇区</a>
+					<a href="###" class="li">长宁区</a>
+					<a href="###" class="li">普陀区</a>
+					<a href="###" class="li">静安区区</a>
+					<a href="###" class="li">松江区</a>
+				</ul>
+			</div>
+			<div class="right">
+				<ul class="right_list">
+					<h5><span>浦东新区</span></h5>
+					<a href="###" class="li">张江</a>
+					<a href="###" class="li">张江1111</a>
+					<a href="###" class="li">张江22222</a>
+					<a href="###" class="li">张江33333</a>
+					<a href="###" class="li">张江444444</a>
+					<a href="###" class="li">张江5555555</a>
+					<a href="###" class="li">张江1111</a>
+					<a href="###" class="li">张江22222</a>
+					<a href="###" class="li">张江33333</a>
+					<a href="###" class="li">张江444444</a>
+					<a href="###" class="li">张江5555555</a>
+				</ul>
+			</div>
+		</div>
+		<a href="../homepage/city.html" class="tips"><i class="icon iconfont down">&#xe684;</i>切换城市</a>
+	</div>
+	<div class="tab_box" style="display: none;">
+		<div class="area_box">
+			<div class="left">
+				<ul class="left_list">
+					<h5>全上海2</h5>
+					<a href="###" class="li current">浦东新区</a>
+					<a href="###" class="li">徐汇区</a>
+					<a href="###" class="li">长宁区</a>
+					<a href="###" class="li">普陀区</a>
+					<a href="###" class="li">静安区区</a>
+					<a href="###" class="li">松江区</a>
+					<a href="###" class="li">浦东新区</a>
+					<a href="###" class="li">徐汇区</a>
+					<a href="###" class="li">长宁区</a>
+					<a href="###" class="li">普陀区</a>
+					<a href="###" class="li">静安区区</a>
+					<a href="###" class="li">松江区</a>
+					<a href="###" class="li">浦东新区</a>
+					<a href="###" class="li">徐汇区</a>
+					<a href="###" class="li">长宁区</a>
+					<a href="###" class="li">普陀区</a>
+					<a href="###" class="li">静安区区</a>
+					<a href="###" class="li">松江区</a>
+				</ul>
+			</div>
+			<div class="right">
+				<ul class="right_list">
+					<h5><span>浦东新区</span></h5>
+					<a href="###" class="li">张江</a>
+					<a href="###" class="li">张江1111</a>
+					<a href="###" class="li">张江22222</a>
+					<a href="###" class="li">张江33333</a>
+					<a href="###" class="li">张江444444</a>
+					<a href="###" class="li">张江5555555</a>
+					<a href="###" class="li">张江1111</a>
+					<a href="###" class="li">张江22222</a>
+					<a href="###" class="li">张江33333</a>
+					<a href="###" class="li">张江444444</a>
+					<a href="###" class="li">张江5555555</a>
+				</ul>
+			</div>
+		</div>
+		<a href="../homepage/city.html" class="tips"><i class="icon iconfont down">&#xe684;</i>切换城市</a>
+	</div>
+	<div class="tab_box" style="display: none;">
+		<div class="area_box">
+			<div class="left">
+				<ul class="left_list">
+					<h5>全上海3</h5>
+					<a href="###" class="li current">浦东新区</a>
+					<a href="###" class="li">徐汇区</a>
+					<a href="###" class="li">长宁区</a>
+					<a href="###" class="li">普陀区</a>
+					<a href="###" class="li">静安区区</a>
+					<a href="###" class="li">松江区</a>
+					<a href="###" class="li">浦东新区</a>
+					<a href="###" class="li">徐汇区</a>
+					<a href="###" class="li">长宁区</a>
+					<a href="###" class="li">普陀区</a>
+					<a href="###" class="li">静安区区</a>
+					<a href="###" class="li">松江区</a>
+					<a href="###" class="li">浦东新区</a>
+					<a href="###" class="li">徐汇区</a>
+					<a href="###" class="li">长宁区</a>
+					<a href="###" class="li">普陀区</a>
+					<a href="###" class="li">静安区区</a>
+					<a href="###" class="li">松江区</a>
+				</ul>
+			</div>
+			<div class="right">
+				<ul class="right_list">
+					<h5><span>浦东新区</span></h5>
+					<a href="###" class="li">张江</a>
+					<a href="###" class="li">张江1111</a>
+					<a href="###" class="li">张江22222</a>
+					<a href="###" class="li">张江33333</a>
+					<a href="###" class="li">张江444444</a>
+					<a href="###" class="li">张江5555555</a>
+					<a href="###" class="li">张江1111</a>
+					<a href="###" class="li">张江22222</a>
+					<a href="###" class="li">张江33333</a>
+					<a href="###" class="li">张江444444</a>
+					<a href="###" class="li">张江5555555</a>
+				</ul>
+			</div>
+		</div>
+		<a href="../homepage/city.html" class="tips"><i class="icon iconfont down">&#xe684;</i>切换城市</a>
+	</div>
+	<div class="tab_box" style="display: none;">
+		<div class="area_box">
+			<div class="left">
+				<ul class="left_list">
+					<h5>全上海4</h5>
+					<a href="###" class="li current">浦东新区</a>
+					<a href="###" class="li">徐汇区</a>
+					<a href="###" class="li">长宁区</a>
+					<a href="###" class="li">普陀区</a>
+					<a href="###" class="li">静安区区</a>
+					<a href="###" class="li">松江区</a>
+					<a href="###" class="li">浦东新区</a>
+					<a href="###" class="li">徐汇区</a>
+					<a href="###" class="li">长宁区</a>
+					<a href="###" class="li">普陀区</a>
+					<a href="###" class="li">静安区区</a>
+					<a href="###" class="li">松江区</a>
+					<a href="###" class="li">浦东新区</a>
+					<a href="###" class="li">徐汇区</a>
+					<a href="###" class="li">长宁区</a>
+					<a href="###" class="li">普陀区</a>
+					<a href="###" class="li">静安区区</a>
+					<a href="###" class="li">松江区</a>
+				</ul>
+			</div>
+			<div class="right">
+				<ul class="right_list">
+					<h5><span>浦东新区</span></h5>
+					<a href="###" class="li">张江</a>
+					<a href="###" class="li">张江1111</a>
+					<a href="###" class="li">张江22222</a>
+					<a href="###" class="li">张江33333</a>
+					<a href="###" class="li">张江444444</a>
+					<a href="###" class="li">张江5555555</a>
+					<a href="###" class="li">张江1111</a>
+					<a href="###" class="li">张江22222</a>
+					<a href="###" class="li">张江33333</a>
+					<a href="###" class="li">张江444444</a>
+					<a href="###" class="li">张江5555555</a>
+				</ul>
+			</div>
+		</div>
+		<a href="../homepage/city.html" class="tips"><i class="icon iconfont down">&#xe684;</i>切换城市</a>
+	</div>
+	<!-- tab切换 -->
+	<!-- 门店排序end-->
+	<!-- 服务排序start -->
+	<div class="sort_list" style="display: none;">
+		<a href="###" class="sort"><span>浦东新区</span><i class="icon iconfont down">&#xe631;</i></a>
+		<a href="###" class="sort"><span>民营机构</span><i class="icon iconfont down">&#xe631;</i></a>
+		<a href="###" class="sort"><span>综合排序</span><i class="icon iconfont down">&#xe631;</i></a>
+	</div>
+	<!-- 服务排序end-->
+	<!-- 门店内容start -->
+	<div class="container content">
+		<!-- 服务产品 start-->
+		<div class="store_list lists">
+			<a href="hospital_detail.html" class="store">
+				<div class="left_img">
+					<img src="../../images/goods.png" alt="">
+				</div>
+				<div class="right_txt">
+					<div class="name">
+						<h3>成长中心徐家汇店</h3>
+						<div class="span_list">
+							<div class="tip_img"><img src="../../images/fu.png" alt=""></div>
+							<div class="tip_img"><img src="../../images/shang.png" alt=""></div>
+							<div class="tip_img"><img src="../../images/bao.png" alt=""></div>
+						</div>
+					</div>
+					<div class="address_box">
+						<span>浦东新区</span>
+						<span class="distance">2.2km</span>
+					</div>
+					<div class="nature">
+						<label for=""><i class="icon iconfont down">&#xe60b;</i><span>1家门店通用</span></label>
+						<label for=""><i class="icon iconfont down">&#xe602;</i><span>1959人</span></label>
+					</div>
+				</div>
+			</a>
+			<a href="hospital_detail.html" class="store">
+				<div class="left_img">
+					<img src="../../images/goods.png" alt="">
+				</div>
+				<div class="right_txt">
+					<div class="name">
+						<h3>成长中心徐家汇店</h3>
+						<div class="span_list">
+							<div class="tip_img"><img src="../../images/fu.png" alt=""></div>
+							<div class="tip_img"><img src="../../images/shang.png" alt=""></div>
+							<div class="tip_img"><img src="../../images/bao.png" alt=""></div>
+						</div>
+					</div>
+					<div class="address_box">
+						<span>浦东新区</span>
+						<span class="distance">2.2km</span>
+					</div>
+					<div class="nature">
+						<label for=""><i class="icon iconfont down">&#xe60b;</i><span>1家门店通用</span></label>
+						<label for=""><i class="icon iconfont down">&#xe602;</i><span>1959人</span></label>
+					</div>
+				</div>
+			</a>
+		</div>
+		<!-- 服务产品 end-->
+	</div>
+	<!-- 门店内容 end-->
+	<!-- 服务内容start -->
+	<div class="container" style="display: none;">
+		<!-- 服务产品 start-->
+		<div class="service_list">
+
+			<a href="service_detail.html" class="service">
+				<div class="left_img">
+					<img src="../../images/goods.png" alt="">
+				</div>
+				<div class="right_txt">
+					<div class="main_title">
+						<h3>全民健康月子套餐全民健康月子套餐全民健康月子套餐</h3>
+						<div class="sales_num">已售199</div>
+					</div>
+					<h4>全民健康月子套餐，全民健康月子套餐全民健康月子套餐全民健康月子套餐全民健康月子套餐全民健康月子套餐全民健康月子套餐</h4>
+					<div class="span_list">
+						<span>量身定制</span>
+						<span>特价产品</span>
+					</div>
+					<div class="price_box">
+						<div class="start">
+							<span class="price">¥100.0</span>
+							<span>/</span>
+							<span class="dou"><i class="icon iconfont">&#xe645;</i>90</span>
+						</div>
+						<div class="store_price">
+							<label for="">门店价<span>¥199.0</span></label>
+						</div>
+					</div>
+
+					<div class="hospital">
+						<div class="left">
+							<i class="icon iconfont down">&#xe60b;</i>
+							<span>成长中心徐家汇店</span>
+						</div>
+						<div class="right">
+							距离2.2km
+						</div>
+					</div>
+				</div>
+			</a>
+
+			<a href="service_detail.html" class="service">
+				<div class="left_img">
+					<img src="../../images/goods.png" alt="">
+				</div>
+				<div class="right_txt">
+					<div class="main_title">
+						<h3>全民健康月子套餐全民健康月子套餐全民健康月子套餐</h3>
+						<div class="sales_num">已售199</div>
+					</div>
+					<h4>全民健康月子套餐，全民健康月子套餐全民健康月子套餐全民健康月子套餐全民健康月子套餐全民健康月子套餐全民健康月子套餐</h4>
+					<div class="span_list">
+						<span>量身定制</span>
+						<span>特价产品</span>
+					</div>
+					<div class="price_box">
+						<div class="start">
+							<span class="price">¥100.0</span>
+							<span>/</span>
+							<span class="dou"><i class="icon iconfont">&#xe645;</i>90</span>
+						</div>
+						<div class="store_price">
+							<label for="">门店价<span>¥199.0</span></label>
+						</div>
+					</div>
+
+					<div class="hospital">
+						<div class="left">
+							<i class="icon iconfont down">&#xe60b;</i>
+							<span>成长中心徐家汇店</span>
+						</div>
+						<div class="right">
+							距离2.2km
+						</div>
+					</div>
+				</div>
+			</a>
+		</div>
+		<!-- 服务产品 end-->
+	</div>
+	<!-- 服务内容end-->
+	<div class="container" style="display: none;">
+		<!-- 暂无内容 start-->
+		<div class="no_data" style="display: none;">
+			<img src="../../images/no_data.png" alt="">
+			<p>暂无内容</p>
+		</div>
+		<!-- 暂无内容 end-->
+	</div>
+
+
+</body>
+</html>
+<script src="../../js/jquery-2.1.4.min.js"></script>
+<script src="../../js/dropload.js"></script>
+<script>
+	// tab切换效果  不要自行删除
+	$(".nav_list .nav").on("click",function(){
+		var index=$(this).index();
+		$(this).addClass("current").siblings().removeClass("current");
+		$(".sort_list").eq(index).show().siblings(".sort_list").hide();
+		$(".container").eq(index).show().siblings(".container").hide();
+	});
+
+	// sort切换效果
+	$(".hospital .sort").on("click",function(e){
+		e.stopPropagation();
+		var $index=$(this).index();
+		if($(this).hasClass('current')){
+			$(".big_layer").hide();
+			$(this).removeClass('current').siblings(".sort").removeClass('current');
+			$(".tab_box").hide();
+		}else{
+			$(".big_layer").show();
+			$(this).addClass('current').siblings(".sort").removeClass('current');
+			$(".tab_box").eq($index).show().siblings('.tab_box').hide();
+		}
+	});
+	// .tab_box .left_list a切换效果
+	$(".tab_box .left_list a").on("click",function(e){
+		e.stopPropagation();
+		var $index=$(this).index();
+		$(this).addClass('current').siblings('a').removeClass('current');
+	})
+	// 点击document弹窗消失效果
+	$(document).on("click",function(){
+		$(".hospital .sort").removeClass('current');
+		$(".big_layer").hide();
+		$(".tab_box").hide();
+	});
+
+
+
+	$(function(){
+    var counter = 0;
+    // 每页展示4个
+    var num = 4;
+    var pageStart = 0,pageEnd = 0;
+
+    // dropload
+    $('.content').dropload({
+        // scrollArea : window,
+        domUp : {
+            domClass   : 'dropload-up',
+            domRefresh : '<div class="dropload-refresh">↓下拉刷新</div>',
+            domUpdate  : '<div class="dropload-update">↑释放更新</div>',
+            domLoad    : '<div class="dropload-load"><span class="loading"></span>加载中...</div>'
+        },
+        domDown : {
+            domClass   : 'dropload-down',
+            domRefresh : '<div class="dropload-refresh">↑上拉加载更多</div>',
+            domLoad    : '<div class="dropload-load"><span class="loading"></span>加载中...</div>',
+            domNoData  : '<div class="dropload-noData">暂无数据</div>'
+        },
+        // loadUpFn : function(me){
+        //     $.ajax({
+        //         type: 'GET',
+        //         url: 'json/update.json',
+        //         dataType: 'json',
+        //         success: function(data){
+        //             var result = '';
+        //             for(var i = 0; i < data.lists.length; i++){
+        //                 result +=   '<a href="hospital_detail.html" class="store">'
+        //                                 +'<div class="left_img"><img src="../../images/goods.png" alt=""></div>'
+        //                                 +'<div class="right_txt">'
+								// 		+	'<div class="name">'
+								// 		+		'<h3>上海人民第一医院上海人民第一医院</h3>'
+								// 		+		'<div class="span_list">'
+								// 		+			'<div class="tip_img"><img src="../../images/fu.png" alt=""></div>'
+								// 		+			'<div class="tip_img"><img src="../../images/shang.png" alt=""></div>'
+								// 		+			'<div class="tip_img"><img src="../../images/bao.png" alt=""></div>'
+								// 		+		'</div>'
+								// 		+	'</div>'
+								// 		+	'<div class="address_box">'
+								// 		+		'<span>浦东新区</span>'
+								// 		+		'<span class="distance">2.2km</span>'
+								// 		+	'</div>'
+								// 		+	'<div class="nature">'
+								// 		+		'<label for=""><i class="icon iconfont down">&#xe60b;</i><span>1家门店通用</span></label>'
+								// 		+		'<label for=""><i class="icon iconfont down">&#xe602;</i><span>1959人</span></label>'
+								// 		+	'</div>'
+								// 		+'</div>'
+        //                            	+'</a>';
+        //             }
+        //             // 为了测试，延迟1秒加载
+        //             setTimeout(function(){
+        //                 $('.lists').html(result);
+        //                 // 每次数据加载完，必须重置
+        //                 me.resetload();
+        //                 // 重置索引值，重新拼接more.json数据
+        //                 counter = 0;
+        //                 // 解锁
+        //                 me.unlock();
+        //                 me.noData(false);
+        //             },1000);
+        //         },
+        //         error: function(xhr, type){
+        //             alert('Ajax error!');
+        //             // 即使加载出错，也得重置
+        //             me.resetload();
+        //         }
+        //     });
+        // },
+        loadDownFn : function(me){
+            $.ajax({
+                type: 'GET',
+                url: 'json/more.json',
+                dataType: 'json',
+                success: function(data){
+                    var result = '';
+                    counter++;
+                    pageEnd = num * counter;
+                    pageStart = pageEnd - num;
+
+                    for(var i = pageStart; i < pageEnd; i++){
+                        result +=   '<a href="hospital_detail.html" class="store">'
+                                        +'<div class="left_img"><img src="../../images/goods.png" alt=""></div>'
+                                        +'<div class="right_txt">'
+										+	'<div class="name">'
+										+		'<h3>成长中心徐家汇店</h3>'
+										+		'<div class="span_list">'
+										+			'<div class="tip_img"><img src="../../images/fu.png" alt=""></div>'
+										+			'<div class="tip_img"><img src="../../images/shang.png" alt=""></div>'
+										+			'<div class="tip_img"><img src="../../images/bao.png" alt=""></div>'
+										+		'</div>'
+										+	'</div>'
+										+	'<div class="address_box">'
+										+		'<span>浦东新区</span>'
+										+		'<span class="distance">2.2km</span>'
+										+	'</div>'
+										+	'<div class="nature">'
+										+		'<label for=""><i class="icon iconfont down">&#xe60b;</i><span>1家门店通用</span></label>'
+										+		'<label for=""><i class="icon iconfont down">&#xe602;</i><span>1959人</span></label>'
+										+	'</div>'
+										+'</div>'
+                                   	+'</a>';
+                        if((i + 1) >= data.lists.length){
+                            // 锁定
+                            me.lock();
+                            // 无数据
+                            me.noData();
+                            break;
+                        }
+                    }
+                    // 为了测试，延迟1秒加载
+                    setTimeout(function(){
+                        $('.lists').append(result);
+                        // 每次数据加载完，必须重置
+                        me.resetload();
+                    },1000);
+                },
+                error: function(xhr, type){
+                    alert('Ajax error!');
+                    // 即使加载出错，也得重置
+                    me.resetload();
+                }
+            });
+        },
+        threshold : 50
+    });
+});
+</script>

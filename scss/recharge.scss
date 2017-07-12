@@ -1,0 +1,166 @@
+@charset "UTF-8";
+@import "reset";
+@import "mixins";
+@import  "variable";
+@import  "header2";
+@import  "footer";
+@import "iconfont/iconfont.css";
+
+html,body{
+	background:#f8f8f8;
+	width: 100%;
+	height: 100%;
+}
+.container{
+	position: absolute;
+	left:0;
+	right:0;
+	top:1.0rem;
+	bottom:1.0rem;
+	overflow:auto;
+	-webkit-overflow-scrolling:touch;
+}
+.recharge_box{
+	padding:0 0.20rem;
+	background:#fff;
+	overflow:hidden;
+	h3{
+		line-height:0.80rem;
+		span{
+			color:$main_g;
+		}
+	}
+	.type_list{
+		@include flexbox;
+	}
+	.type{
+		@include flexbox;
+		@include border_1px;
+		@include flex(1);
+		@include  vertical-layout(center);
+		@include  horizontal-layout(center);
+		@include vertical;
+		width: 0;
+		border-width:1px;
+		height: 1.0rem;
+		margin-left: 0.10rem;
+		margin-bottom:0.10rem;
+		font-size:0.24rem;
+		&:first-child{
+			margin-left:0;
+		}
+		&.choose{
+			background:$main_g;
+			color:#fff;
+			.money{
+				color:#fff;
+			}
+		}
+		.dou_num{
+			font-size:0.36rem;
+		}
+		.money{
+			color:$main_g;
+		}
+	}
+}
+
+
+.define_box{
+	@include flexbox;
+	@include  vertical-layout(center);
+	padding:0.20rem 0;
+	.num_box{
+		@include flexbox;
+		@include vertical-layout(center);
+		@include border_1px;
+		@include flex(1);
+		@include  horizontal-layout(justify);
+		margin-left:0.20rem;
+		padding:0 0.20rem;
+		border-width:1px;
+		input{
+				line-height:1.2;
+				padding:0.20rem;
+				width: 1.6rem;
+			}
+		.money{
+			color:$main_g;
+		}
+	}
+}
+.define{
+	@include flexbox;
+	@include  vertical-layout(center);
+}
+
+//checkbox radio 样式start
+.check_box{
+	position: relative;
+	padding-right: 0.10rem;
+	.switch{
+		@include border-radius(100%);
+		position: relative;
+		border:1px solid #666666;
+		width: 16px;
+		height:16px;
+		top:0;
+		left:0;
+	}
+	input{
+		top:0;
+		left:0;
+		position:absolute;
+		z-index:999;
+		opacity: 0;
+		width: 100%;
+		height: 100%;
+	}
+	input:checked + .switch{
+		border:1px solid $main_y;
+		&::before{
+			@include border-radius(100%);
+			content:"\200B";
+			position:absolute;
+			width: 10px;
+			height: 10px;
+			background:$main_y;
+			margin-top:-5px;
+			margin-left:-5px;
+			top:50%;
+			left:50%;
+		}
+	}
+}
+
+//checkbox radio 样式end
+.pay_type{
+	h3{
+		@include border_1px;
+		border-top-width:1px;
+		border-bottom-width:1px;
+		line-height:0.8rem;
+		padding:0 0.20rem;
+	}
+	.pay{
+		@include flexbox;
+		@include horizontal-layout(justify);
+		@include  vertical-layout(center);
+		@include border_1px;
+		border-bottom-width:1px;
+		padding:0.20rem;
+		background:#fff;
+		.left{
+			img{
+				width: 0.40rem;
+				height: 0.40rem;
+				vertical-align: middle;
+				margin-right:0.10rem;
+			}
+			span{
+				vertical-align:middle;
+			}
+		}
+	}
+}
+

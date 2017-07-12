@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>设置</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta content="yes" name="apple-mobile-web-app-capable" />
+    <meta content="black" name="apple-mobile-web-app-status-bar-style" />
+    <meta content="telephone=no" name="format-detection" />
+    <meta content="email=no" name="format-detection" />
+    <link rel="stylesheet" href="../../css/user_info.css">
+    <script src="../../js/rem.js"></script>
+</head>
+<body onload="loadFun();">
+    <!-- 页面加载中start -->
+    <div class="my_loading">
+        <img src="../../images/gaox.gif" alt="">
+    </div>
+    <!-- 页面加载中end -->
+	<!-- 头部 start-->
+    <div class="header">
+        <header>
+            <div class="back" onclick="history.go(-1);">
+                <i class="icon iconfont down">&#xe6dc;</i>
+            </div>
+            <div class="nav_list">
+                <a href="###" class="nav">设置</a>
+            </div>
+        </header>
+    </div>
+    <!-- 头部 end-->
+	<div class="container">
+		<a href="set_key.html" class="line">
+			<div class="left color">
+				<i class="icon iconfont down">&#xe651;</i>
+				<span>设置安全锁</span>
+			</div>
+			<div class="right">
+				<i class="icon iconfont down">&#xe6da;</i>
+			</div>
+		</a>
+		<a href="login.html" class="line" onclick="fun1();">
+			<div class="left color">
+				<i class="icon iconfont down">&#xe68e;</i>
+				<span>退出当前账号</span>
+			</div>
+		</a>
+	</div>
+</body>
+</html>
+<script src="../../js/jquery-2.1.4.min.js"></script>
+<script src="../../js/layer.js"></script>
+<script>
+    //询问框
+    function fun1(){
+        var html='<p style="text-align:center;">确认退出？</p>';
+        layer.open({
+            content: html,
+            btn: ['是', '否'],
+            yes:function(){
+                // 点是事件
+                alert(1);
+            }
+        });
+    }
+
+</script>

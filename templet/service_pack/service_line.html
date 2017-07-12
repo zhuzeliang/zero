@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+    <title>在线客服</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta content="yes" name="apple-mobile-web-app-capable" />
+    <meta content="black" name="apple-mobile-web-app-status-bar-style" />
+    <meta content="telephone=no" name="format-detection" />
+    <meta content="email=no" name="format-detection" />
+    <link rel="stylesheet" href="../../css/service_line.css">
+    <script src="../../js/rem.js"></script>
+</head>
+<body onload="loadFun();">
+    <!-- 页面加载中start -->
+    <div class="my_loading">
+        <img src="../../images/gaox.gif" alt="">
+    </div>
+    <!-- 页面加载中end -->
+	<!-- 头部 start-->
+    <div class="header">
+        <header>
+            <a href="###" class="back" onclick="fun1();">
+                <i class="icon iconfont down">&#xe6dc;</i>
+            </a>
+            <div class="nav_list">
+                <a href="###" class="nav">在线客服</a>
+            </div>
+        </header>
+    </div>
+    <!-- 头部 end-->
+
+   <!-- container start -->
+   <div class="container">
+        <div class="dialog">
+            <div class="time">2017年12月12日 0:39 AM</div>
+             <div class="req_box">
+                <div class="left">
+                    <img src="../../images/activity_01.png" alt="" class="head_img">
+                </div>
+                <div class="right">
+                    <p class="name">天使</p>
+                    <p class="txt"><span>您好，请问有什么可以帮助您吗？</span><em></em></p>
+                </div>
+            </div>
+             <div class="res_box">
+                <div class="right">
+                    <p class="name">suger</p>
+                    <p class="txt"><span>您好，请问有什么可以帮助您吗？</span><em></em></p>
+                </div>
+                <div class="left">
+                    <img src="../../images/activity_02.png" alt="" class="head_img">
+                </div>
+            </div>
+             <div class="req_box">
+                <div class="left">
+                    <img src="../../images/activity_01.png" alt="" class="head_img">
+                </div>
+                <div class="right">
+                    <p class="name">天使</p>
+                    <p class="txt"><span>您好，请问有什么可以帮助您吗？</span><em></em></p>
+                </div>
+            </div>
+             <div class="res_box">
+                <div class="right">
+                    <p class="name">suger</p>
+                    <p class="txt"><span>您好，请问有什么可以帮助您吗？您好，请问有什么可以帮助您吗？您好，请问有什么可以帮助您吗？您好，请问有什么可以帮助您吗？您好，请问有什么可以帮助您吗？</span><em></em></p>
+                </div>
+                <div class="left">
+                    <img src="../../images/activity_02.png" alt="" class="head_img">
+                </div>
+            </div>
+        </div>
+   </div>
+    <!--  container end -->
+    <!-- 底部导航start -->
+    <div class="footer">
+        <input type="file" style="display: none;" id="img">
+        <footer>
+            <div class="face_box">
+                <label for="img">
+                     <img src="../../images/img.png" alt="">
+                </label>
+                <label for="">
+                    <img src="../../images/xiao.png" alt="">
+                </label>
+                </span>
+            </div>
+            <div class="input_box">
+                <input type="text">
+                <div class="enter">
+                    <img src="../../images/enter.png" alt="">
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
+<script src="../../js/jquery-2.1.4.min.js"></script>
+<script src="../../js/layer.js"></script>
+<script>
+    //询问框
+    function fun1(){
+        var html='<p style="text-align:center;">是否结束当前聊天？</p>';
+        layer.open({
+            content: html,
+            btn: ['是', '否'],
+            yes:function(){
+                window.history.go(-1);
+            }
+        });
+    }
+
+</script>

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta content="yes" name="apple-mobile-web-app-capable" />
+    <meta content="black" name="apple-mobile-web-app-status-bar-style" />
+    <meta content="telephone=no" name="format-detection" />
+    <meta content="email=no" name="format-detection" />
+    <link rel="stylesheet" href="../../css/service_detail.css">
+    <script src="../../js/rem.js"></script>
+	<title>服务详情</title>
+</head>
+<body onload="loadFun();">
+	<!-- 页面加载中start -->
+	<div class="my_loading">
+		<img src="../../images/gaox.gif" alt="">
+	</div>
+	<!-- 页面加载中end -->
+	<!-- 头部 start-->
+	<div class="header">
+		<header>
+			<div class="back" onclick="history.go(-1);">
+				<i class="icon iconfont down">&#xe6dc;</i>
+			</div>
+			<div class="nav_list">
+				<a href="###" class="nav">服务详情</a>
+			</div>
+		</header>
+	</div>
+	<!-- 头部 end-->
+	<div class="container">
+		<!-- banner图 start -->
+		<div class="banner">
+			<img src="../../images/banner.png" alt="">
+			<div class="pay_method">
+				<a><i class="icon iconfont">&#xe645;</i><span>趣豆支付</span></a>
+				<a><i class="icon iconfont">&#xe657;</i><span> 优惠劵</span></a>
+			</div>
+		</div>
+		<!-- banner图 end -->
+
+		<div class="meal">
+			<div class="meal_name">
+				<h3>亲子益智套餐</h3>
+				<p><i class="icon iconfont">&#xe602;</i><span>68</span>人</p>
+			</div>
+			<h4>针对儿童的一个基础套餐针对儿童的一个基础套餐针对儿童的一个基础套餐针对儿童的一个基础套餐</h4>
+		</div>
+
+
+		<div class="module">
+			<div class="price_box">
+				<p class="left">
+					<label for="">价格：</label>
+					<span class="price">¥100.0</span>
+				</p>
+				<p class="right">
+					<label for="">门店价：</label>
+					<span>¥356.0</span>
+				</p>
+			</div>
+			<div class="dou_box">
+				<label for="">趣豆价：</label>
+				<span class="dou"><i class="icon iconfont">&#xe645;</i>90</span>
+				(<span><i class="icon iconfont">&#xe645;</i> 1 = ¥ 1</span>)
+			</div>
+		</div>
+
+		<div class="module">
+			<div class="type_box">
+				<label for="">可选类型</label>
+				<div class="span_list">
+					<span class="type choose">A类型<em></em></span>
+					<span class="type">B类型<em></em></span>
+					<span class="type">C类型<em></em></span>
+				</div>
+			</div>
+		</div>
+
+		<div class="module">
+			<a href="###" class="address_box">
+				<img src="../../images/address.png" alt="">
+				<div class="address">
+					<p class="address_name">成长中心徐家汇店</p>
+					<p>上海市徐汇区桂林路200号2栋</p>
+				</div>
+				<i class="icon iconfont">&#xe6da;</i>
+			</a>
+		</div>
+
+		<div class="module">
+			<h4>商户介绍</h4>
+			<p class="detail">
+				"亲子教育"是以亲缘关系为主要基础，根据我国特有的家庭状况，这种关系被扩展为所有与幼儿亲密接触的人一一看护人与幼儿之间的关系，从而形成看护人与幼儿之间的以互动为核心内容的亲子关系。所有，"亲子关系"是以爱护婴幼儿身心健康和开发潜能以及培养个性为目标，以不断
+			</p>
+		</div>
+		<div class="module">
+			<h4>预约须知</h4>
+			<p class="detail">
+				"亲子教育"是以亲缘关系为主要基础，根据我国特有的家庭状况，这种关系被扩展为所有与幼儿亲密接触的人一一看护人与幼儿之间的关系，从而形成看护人与幼儿之间的以互动为核心内容的亲子关系。所有，"亲子关系"是以爱护婴幼儿身心健康和开发潜能以及培养个性为目标，以不断
+			</p>
+		</div>
+	</div>
+
+	<!-- 底部导航start -->
+	<div class="footer">
+		<footer>
+			<a href="../service_pack/service_line.html" class="mes">
+				<i class="icon iconfont">&#xe686;</i>
+			</a>
+			<a href="../order/service_append.html" class="appoint">
+				立即预约
+			</a>
+		</footer>
+	</div>
+	<!-- 底部导航end -->
+	<!-- 回到首页start -->
+	<a href="../homepage/index.html" class="fixed">
+		<i class="icon iconfont">&#xe601;</i>
+		<p>首页</p>
+	</a>
+	<!-- 回到首页end -->
+
+
+</body>
+</html>
+<script src="../../js/jquery-2.1.4.min.js"></script>
+<script>
+	$(".span_list .type").on("click",function(){
+		$(this).addClass('choose').siblings('.type').removeClass('choose');
+	})
+</script>

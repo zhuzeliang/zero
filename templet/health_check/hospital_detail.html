@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta content="yes" name="apple-mobile-web-app-capable" />
+    <meta content="black" name="apple-mobile-web-app-status-bar-style" />
+    <meta content="telephone=no" name="format-detection" />
+    <meta content="email=no" name="format-detection" />
+    <link rel="stylesheet" href="../../css/hospital_detail.css">
+    <script src="../../js/rem.js"></script>
+	<title>机构详情</title>
+</head>
+<body onload="loadFun();">
+	<!-- 页面加载中start -->
+	<div class="my_loading">
+		<img src="../../images/gaox.gif" alt="">
+	</div>
+	<!-- 页面加载中end -->
+	<!-- 头部 start-->
+	<div class="header">
+		<header>
+			<div class="back" onclick="history.go(-1);">
+				<i class="icon iconfont down">&#xe6dc;</i>
+			</div>
+			<div class="nav_list">
+				<a href="###" class="nav">机构详情</a>
+			</div>
+		</header>
+	</div>
+	<!-- 头部 end-->
+	<div class="container">
+		<!-- banner图 start -->
+		<div class="banner">
+			<img src="../../images/banner.png" alt="">
+			<div class="pay_method welfare_send">
+				<a href="../discovery/welfare_detail.html"><i class="icon iconfont">&#xe609;</i><span>福利发放中</span> &gt;</a>
+			</div>
+		</div>
+		<!-- banner图 end -->
+
+		<div class="module">
+			<div class="price_box">
+				<label for="">预约时间：</label>
+				<span>提前3天</span>
+			</div>
+			<div>
+				<label for="">服务时间：</label>
+				<span>周一至周五9:00-12:00(抽血截止10:00)</span>
+			</div>
+		</div>
+
+		<div class="module">
+			<a href="###" class="address_box">
+				<img src="../../images/address.png" alt="">
+				<div class="address">
+					<p class="address_name">成长中心徐家汇店</p>
+					<p>上海市徐汇区桂林路200号2栋</p>
+				</div>
+				<i class="icon iconfont">&#xe6da;</i>
+			</a>
+		</div>
+
+		<div class="module">
+			<h4>商户介绍</h4>
+			<p class="detail">
+				"亲子教育"是以亲缘关系为主要基础，根据我国特有的家庭状况，这种关系被扩展为所有与幼儿亲密接触的人一一看护人与幼儿之间的关系，从而形成看护人与幼儿之间的以互动为核心内容的亲子关系。所有，"亲子关系"是以爱护婴幼儿身心健康和开发潜能以及培养个性为目标，以不断
+			</p>
+		</div>
+
+
+		<div class="tab_list">
+			<a href="###" class="tab current">服务详情(8)</a>
+			<a href="###" class="tab">服务包(8)</a>
+		</div>
+		<!-- 服务产品 start-->
+		<div class="service_list list_box">
+
+			<a href="service_detail.html" class="service">
+				<div class="left_img">
+					<img src="../../images/goods.png" alt="">
+				</div>
+				<div class="right_txt">
+					<div class="main_title">
+						<h3>全民健康月子套餐全民健康月子套餐全民健康月子套餐</h3>
+						<div class="sales_num">已售199</div>
+					</div>
+					<h4>全民健康月子套餐，全民健康月子套餐全民健康月子套餐全民健康月子套餐全民健康月子套餐全民健康月子套餐全民健康月子套餐</h4>
+					<div class="span_list">
+						<span>量身定制</span>
+						<span>特价产品</span>
+					</div>
+					<div class="price_box">
+						<div class="start">
+							<span class="price">¥100.0</span>
+							<span>/</span>
+							<span class="dou"><i class="icon iconfont">&#xe645;</i>90</span>
+						</div>
+						<div class="store_price">
+							<label for="">门店价<span>¥199.0</span></label>
+						</div>
+					</div>
+				</div>
+			</a>
+
+			<a href="service_detail.html" class="service">
+				<div class="left_img">
+					<img src="../../images/goods.png" alt="">
+				</div>
+				<div class="right_txt">
+					<div class="main_title">
+						<h3>全民健康月子套餐全民健康月子套餐全民健康月子套餐</h3>
+						<div class="sales_num">已售199</div>
+					</div>
+					<h4>全民健康月子套餐，全民健康月子套餐全民健康月子套餐全民健康月子套餐全民健康月子套餐全民健康月子套餐全民健康月子套餐</h4>
+					<div class="span_list">
+						<span>量身定制</span>
+						<span>特价产品</span>
+					</div>
+					<div class="price_box">
+						<div class="start">
+							<span class="price">¥100.0</span>
+							<span>/</span>
+							<span class="dou"><i class="icon iconfont">&#xe645;</i>90</span>
+						</div>
+						<div class="store_price">
+							<label for="">门店价<span>¥199.0</span></label>
+						</div>
+					</div>
+				</div>
+			</a>
+		</div>
+		<!-- 服务产品 end-->
+		<!-- 附近的福利 start-->
+		<div class="welfare_list list_box" style="display: none;">
+			<a href="../service_pack/service_pack_detail.html" class="welfare">
+				<div class="top_img">
+					<img src="../../images/welfare.png" alt="">
+				</div>
+				<div class="bottom_txt">
+					<div class="start">全民健康月子套餐全民健康月子套餐全民健康月子套餐全民健康月子套餐</div>
+					<div class="end"><span class="price">¥500.0</span><span> / </span><span class="dou"><i class="icon iconfont">&#xe645;</i>90</span></div>
+				</div>
+			</a>
+			<a href="../service_pack/service_pack_detail.html" class="welfare">
+				<div class="top_img">
+					<img src="../../images/welfare.png" alt="">
+				</div>
+				<div class="bottom_txt">
+					<div class="start">全民健康月子套餐全民健康月子套餐全民健康月子套餐全民健康月子套餐</div>
+					<div class="end"><span class="price">¥500.0</span><span> / </span><span class="dou"><i class="icon iconfont">&#xe645;</i>90</span></div>
+				</div>
+			</a>
+		</div>
+		<!-- 附近的福利 end-->
+		<!-- 暂无内容 start-->
+		<div class="no_data" style="display: none;">
+			<img src="../../images/no_data.png" alt="">
+			<p>暂无内容</p>
+		</div>
+		<!-- 暂无内容 end-->
+	</div>
+
+	<!-- 回到首页start -->
+	<a href="../homepage/index.html" class="fixed">
+		<i class="icon iconfont">&#xe601;</i>
+		<p>首页</p>
+	</a>
+	<!-- 回到首页end -->
+
+
+</body>
+</html>
+<script src="../../js/jquery-2.1.4.min.js"></script>
+<script>
+	// tab切换效果
+	$(".tab_list .tab").on("click",function(){
+		var index=$(this).index();
+		$(this).addClass('current').siblings().removeClass('current');
+		$(".list_box").eq(index).show().siblings(".list_box").hide();
+	});
+</script>

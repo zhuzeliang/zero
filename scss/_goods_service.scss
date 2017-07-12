@@ -1,0 +1,102 @@
+@charset "UTF-8";
+// 产品服务列表样式
+.service_list{
+	padding:0 0.20rem;
+	background:#fff;
+}
+.service{
+	@include flexbox;
+	@include border_1px;
+	border-bottom-width: 1px;
+	padding:0.20rem 0;
+	color:#828282;
+	line-height: 1.3;
+	.left_img{
+		margin-right: 0.20rem;
+		img{
+			width: 1.89rem;
+			height: 1.55rem;
+		}
+	}
+	.right_txt{
+		// @include flexbox;
+		@include flex(1);
+		// @include vertical;
+		font-size:0.24rem;
+		.main_title{
+			@include flexbox;
+			@include horizontal-layout(justify);
+			@include vertical-layout(end);
+			h3{
+				@include flex(1);
+				@include clamp(1);
+				margin-right:0.20rem;
+				font-size:0.28rem;
+				color:#000;
+			}
+		}
+		h4{
+			@include clamp(1);
+			margin-top:0.10rem;
+		}
+		.span_list{
+			margin-top:0.10rem;
+			// margin-bottom:0.10rem;
+			// @include flex(1);
+			span{
+				@include border-radius(5px);
+				display:inline-block;
+				padding:0.03rem;
+				background:#d1f1f5;
+				color:$main_g;
+				white-space: nowrap;
+				margin-right:3px;
+				line-height:1;
+			}
+		}
+		.price_box{
+			@include flexbox;
+			@include horizontal-layout(justify);
+			@include vertical-layout(end);
+			// margin-bottom:0.10rem;
+			.price{
+				color:$main_g;
+				font-size:0.30rem;
+			}
+			.dou{
+				color:$main_y;
+				font-size:0.30rem;
+			}
+			.store_price{
+				color:#828282;
+			}
+		}
+		.distance{
+			color:$main_y;
+		}
+	}
+	&:first-child{
+		border-top-width:0;
+	}
+	.hospital{
+		@include border_1px;
+		@include flexbox;
+		@include horizontal-layout(justify);
+		border-top-width:1px;
+		padding-top:0.20rem;
+		margin-top:0.10rem;
+		.left{
+			@include flexbox;
+			@include flex(1);
+			margin-right:0.20rem;
+			i{
+				margin-right:0.10rem;
+				color:#000;
+			}
+			span{
+				@include flex(1);
+				@include clamp(1);
+			}
+		}
+	}
+}

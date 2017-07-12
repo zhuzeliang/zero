@@ -1,0 +1,258 @@
+@charset "UTF-8";
+@import "reset";
+@import "mixins";
+@import  "variable";
+@import  "header2";
+@import "iconfont/iconfont.css";
+html,body{
+	background:#f8f8f8;
+	width: 100%;
+	height:100%;
+}
+.container{
+	position: absolute;
+	top:1.0rem;
+	left:0;
+	right:0;
+	bottom:1.0rem;
+	overflow:auto;
+	-webkit-overflow-scrolling:touch;
+}
+
+
+.banner{
+	position: relative;
+	img{
+		width: 100%;
+		height: 3.5rem;
+	}
+	.pay_method{
+		position: absolute;
+		right:0.20rem;
+		bottom:0;
+		font-size:0;
+		a{
+			display:inline-block;
+			padding:0 0.10rem;
+			line-height: 0.40rem;
+			background:$main_y;
+			color:#fff;
+			font-size:0.24rem;
+			text-align:center;
+			margin-left:0.10rem;
+			i{
+				margin-right:0.10rem;
+			}
+		}
+	}
+}
+.line_box{
+	margin-bottom:0.20rem;
+}
+.meal{
+	padding:0.20rem;
+	color:#828282;
+	font-size:0.24rem;
+	line-height:1.2;
+	background:#fff;
+	.line{
+		&:first-child{
+			padding-bottom: 0.20rem;
+		}
+		color:#000;
+		font-size:0.28rem;
+	}
+	.meal_name{
+		@include flexbox;
+		@include horizontal-layout(justify);
+		margin-bottom:0.10rem;
+		i{
+			margin-right:0.04rem;
+		}
+		h3{
+			@include flex(1);
+			margin-right:0.20rem;
+			color:#000;
+			font-size:0.28rem;
+		}
+	}
+	.sub{
+		@include flexbox;
+		@include horizontal-layout(justify);
+		h4{
+			@include flex(1);
+			margin-right:0.20rem;
+			em{
+				color:$main_y;
+			}
+		}
+	}
+}
+
+.module{
+	@include border_1px;
+	background:#fff;
+	font-size:0.24rem;
+	color:#828282;
+	border-top-width:1px;
+	border-bottom-width:1px;
+	margin-bottom:0.20rem;
+	padding:0.20rem;
+	line-height:1.4;
+	text-align:justify;
+	h4{
+		color:#000;
+		margin-bottom:0.10rem;
+	}
+	.price_box{
+		@include flexbox;
+		@include horizontal-layout(justify);
+		margin-bottom:0.20rem;
+		.price{
+			color:$main_g;
+		}
+	}
+	.dou_box{
+		.dou{
+			color:$main_y;
+		}
+	}
+
+	.type_box{
+		@include flexbox;
+		label{
+			margin-right:0.20rem;
+			color:#000;
+		}
+		.type{
+			padding:0.05rem 0.20rem;
+			border:1px solid #828282;
+			position: relative;
+			margin-right:0.10rem;
+			em{
+				width: 0;
+			    height: 0;
+			    border-top: 0.14rem solid #828282;
+			    border-left: 0.14rem solid transparent; 
+			    position: absolute;
+			    top:0;
+			    right:0;
+			}
+			&.choose{
+				border:1px solid $main_g;
+				em{
+					width: 0;
+				    height: 0;
+				    border-top: 0.14rem solid $main_g;
+				    border-left: 0.14rem solid transparent; 
+				    position: absolute;
+				    top:0;
+				    right:0;
+				}
+			}
+		}
+	}
+
+	.address_box{
+		@include flexbox;
+		@include vertical-layout(center);
+		line-height:1.2;
+		font-size:0.24rem;
+		color:#828282;
+		img{
+			width: 0.39rem;
+			height: 0.49rem;
+		}
+		.address{
+			@include flex(1);
+			padding:0 0.20rem;
+			.address_name{
+				color:#000;
+				margin-bottom:0.10rem;
+			}
+		}
+		i{
+			font-size:0.36rem;
+			vertical-align:middle;
+		}
+		span{
+			vertical-align:middle;
+		}
+	}
+	.value_box{
+		@include flexbox;
+		@include vertical-layout(center);
+		img{
+			width:0.42rem;
+			height:0.42rem;
+			margin-right:0.20rem;
+		}
+		p{
+			margin-right:0.40rem;
+			&.dou{
+				color:$main_y;
+			}
+		}
+	}
+}
+
+
+.footer{
+	@include border_1px;
+	position: absolute;
+	bottom:0;
+	left:0;
+	width: 100%;
+	border-top-width:1px;
+	z-index: 2;
+	background: #fff;
+}
+footer{
+	@include flexbox;
+	@include vertical-layout(center);
+	@include vertical-layout(stretch);
+	height: 1.0rem;
+	height: 1.0rem;
+	.mes{
+		@include flexbox;
+		@include vertical-layout(center);
+		@include horizontal-layout(center);
+		width: 1.10rem;
+		text-align:center;
+		color:$main_g;
+		font-size:0.70rem;
+	}
+	.appoint{
+		@include flexbox;
+		@include vertical-layout(center);
+		@include horizontal-layout(center);
+		@include flex(1);
+		background:$main_g;
+		color:#fff;
+		font-size:0.30rem;
+	}
+	.part_in{
+		background:#b4b4b4;
+	}
+}
+
+
+.fixed{
+	@include flexbox;
+	@include vertical-layout(center);
+	@include horizontal-layout(center);
+	@include border-radius(50%);
+	@include vertical;
+	position: absolute;
+	right:0.20rem;
+	bottom:1.50rem;
+	width: 0.94rem;
+	height: 0.94rem;
+	background:$main_g;
+	z-index:999;
+	color:#fff;
+	font-size:0.24rem;
+	i{
+		font-size:0.50rem;
+	}
+}

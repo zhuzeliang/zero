@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>充值</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta content="yes" name="apple-mobile-web-app-capable" />
+    <meta content="black" name="apple-mobile-web-app-status-bar-style" />
+    <meta content="telephone=no" name="format-detection" />
+    <meta content="email=no" name="format-detection" />
+    <link rel="stylesheet" href="../../css/recharge.css">
+    <script src="../../js/rem.js"></script>
+</head>
+<body onload="loadFun();">
+    <!-- 页面加载中start -->
+    <div class="my_loading">
+        <img src="../../images/gaox.gif" alt="">
+    </div>
+    <!-- 页面加载中end -->
+	<!-- 头部 start-->
+    <div class="header">
+        <header>
+            <div class="back" onclick="history.go(-1);">
+                <i class="icon iconfont down">&#xe6dc;</i>
+            </div>
+            <div class="nav_list">
+                <a href="###" class="nav">充值</a>
+            </div>
+        </header>
+    </div>
+    <!-- 头部 end-->
+	<div class="container">
+		<div class="recharge_box">
+            <h3><label for="">请选择充值数量：</label><span>(首充送10趣豆)</span></h3>
+            <div class="type_list">
+                <div class="type choose">
+                    <p><span  class="dou_num">50</span>趣豆</p>
+                    <p class="money">(¥50)</p>
+                </div>
+                <div class="type">
+                    <p><span  class="dou_num">100</span>趣豆</p>
+                    <p class="money">(¥50)</p>
+                </div>
+                <div class="type">
+                    <p><span  class="dou_num">200</span>趣豆</p>
+                    <p class="money">(¥50)</p>
+                </div>
+            </div>
+             <div class="type_list">
+                <div class="type">
+                    <p><span  class="dou_num">300</span>趣豆</p>
+                    <p class="money">(¥50)</p>
+                </div>
+                <div class="type">
+                    <p><span  class="dou_num">500</span>趣豆</p>
+                    <p class="money">(¥50)</p>
+                </div>
+                <div class="type">
+                    <p><span  class="dou_num">1000</span>趣豆</p>
+                    <p class="money">(¥50)</p>
+                </div>
+            </div>
+            <div class="define_box">
+                <div class="define">
+                    <div class="check_box">
+                        <input type="checkbox" id="checkbox">
+                        <div class="switch"></div>
+                    </div>
+                    <label for="checkbox">自定义数量</label>
+                </div>
+                <div class="num_box">
+                    <div class="left">
+                        <label for="">趣豆</label>
+                        <input type="tel"  placeholder="600" class="qudou">
+                    </div>
+                    <div class="right">
+                        <span class="money">(¥600)</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 支付方式start -->
+        <div class="pay_type">
+            <h3>支付方式</h3>
+            <label for="radio1" class="pay">
+                <div class="left">
+                    <img src="../../images/apipay.png" alt="">
+                    <span>支付宝支付</span>
+                </div>
+                <div class="right">
+                    <div class="check_box">
+                        <input type="radio" id="radio1" name="pay" checked>
+                        <div class="switch"></div>
+                    </div>
+                </div>
+            </label>
+            <label for="radio2" class="pay">
+                <div class="left">
+                    <img src="../../images/wechat.png" alt="">
+                    <span>微信支付</span>
+                </div>
+                <div class="right">
+                    <div class="check_box">
+                        <input type="radio" id="radio2" name="pay">
+                        <div class="switch"></div>
+                    </div>
+                </div>
+            </label>
+        </div>
+
+
+        <!-- 支付方式end-->
+	</div>
+
+    <!-- 底部导航start -->
+    <div class="footer">
+        <footer>
+            <a href="../user_center/finish2.html" class="pay">
+                <span>立即支付</span><span>¥500</span>
+            </a>
+        </footer>
+    </div>
+    <!-- 底部导航end -->
+</body>
+</html>
+<script src="../../js/jquery-2.1.4.min.js"></script>
+<script>
+    // 充值类型选择效果
+    $(".type").on("click",function(){
+        $(".type").removeClass('choose');
+        $(this).addClass('choose');
+        if($("#checkbox").prop("checked")){
+            $("#checkbox").prop("checked",false);
+        }
+    });
+
+    $("#checkbox").on("change",function(){
+        if($(this).prop("checked")){
+            $(".type").removeClass('choose');
+        }
+    })
+</script>

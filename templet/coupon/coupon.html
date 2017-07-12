@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta content="yes" name="apple-mobile-web-app-capable" />
+    <meta content="black" name="apple-mobile-web-app-status-bar-style" />
+    <meta content="telephone=no" name="format-detection" />
+    <meta content="email=no" name="format-detection" />
+    <link rel="stylesheet" type="text/css" href="../../css/iconfont/iconfont.css">
+    <script type="text/javascript" src="../../js/jquery-2.1.4.min.js"></script>
+    <script src="../../js/rem.js"></script>
+     <script src="../../js/layer_mobile/layer.js" type="text/javascript"></script>
+	<title>领卷中心</title>
+	<style type="text/css">
+		*{
+			padding: 0;
+			margin: 0;
+			list-style: none;
+		}
+
+		body{
+			background-color: #f8f8f8;
+		}
+
+		a {
+		    text-decoration: none;
+		    -webkit-tap-highlight-color: transparent;
+		}
+
+		
+		.slide a{
+			display: block;
+		}
+
+		.slide img{
+			width: 100%;
+			height: 100%;
+		}
+
+
+		.slide_box{
+			position: relative;
+		}
+
+		.header {
+		    position: absolute;
+		    width: 100%;
+		    top:0;
+		    left: 0;
+		    display: -webkit-box;
+		    -webkit-box-align: center;
+		    -webkit-box-sizing: border-box;
+		    box-sizing: border-box;
+		    padding:0  0.20rem;
+		}
+
+		.header .back {
+		    font-size: 0.46rem;
+		    width: 0.50rem;
+		}
+
+		.header .nav_list {
+		    -webkit-box-flex: 1;
+		    text-align: center;
+		    margin-left: -0.50rem;
+		    line-height: 1.0rem;
+		}
+
+		.header .nav_list .nav {
+		    display: block;
+		    padding: 0 0.40rem;
+		    font-size: 0.30rem;
+		    color: #000;
+		    font-weight: bold;
+		}
+
+
+		.search_box{
+			padding: 0 0.4rem;
+			font-size: 0.5rem;
+		}
+
+		.search{
+			display: -webkit-box;
+			/*-webkit-box-flex: 1;*/
+			width: 100%;
+		}
+
+		.input_box{
+			padding: 0 0.2rem;
+		}
+
+		.input_box input{
+			border: #d8d8d8 solid 1px;
+		    padding: 0.2rem 0 0.2rem 0.30rem;
+		    width: 4rem;
+		        
+		}
+
+		.search_btn{
+			display: inline-block;
+		}
+
+		.search_btn a,.search_btn input{
+			background-color: #fe5c43;
+			color: #fff;
+			font-size: 0.3rem;
+    		padding: 0.2rem 0.5rem;
+			border: 0;
+		}
+
+		.lq_coupon{
+			padding: 0.2rem 0.4rem;  
+		}
+		
+		.war_tit{
+			margin: 0.4rem 0;
+		}
+
+		.conpon_tit{
+			position: relative;
+			border-top: #000 solid 1px;
+		}
+
+		.conpon_tit span{
+			position: absolute;
+			font-size: .4rem;
+			padding: 0 0.2rem;
+			background-color: #f8f8f8;
+			left: 31%;
+			top:-0.25rem;
+			color: #555555;
+		}
+
+		.conpon_call{
+			width: 100%;
+		}
+
+		.call_left{
+			background: url(../../images/bg_01.png) no-repeat;
+			 background-size: 100% 100%
+		}
+
+		.conenter_list{
+			padding: 0 0.4rem 0;
+			background: #fff;
+		}
+
+		.conenter_list a{
+			color: #000;
+			display: block;
+			width: 100%;
+			padding: 0.2rem 0;
+		}
+
+		.couponNameArea,.couponBtnArea{
+			font-size: 0.3rem;
+		}
+
+		.couponNameArea,.couponPriceArea{
+			float: left;
+		}
+
+		.couponNameArea{
+			padding-left: 0.55rem;
+		}
+
+		.couponPriceArea{
+			font-size: .8rem;
+			color: #fd3511;
+			margin-left: 0.35rem;
+			font-weight: bold;
+		}
+
+		.coup_color{
+			color: #ff9b0b;
+		}
+
+		.couponPrice span{
+			font-size: 0.5rem;
+		}
+
+		.list_left{
+			float: left;
+			background: url(../../images/bg_01.png) no-repeat;
+			background-size: cover;
+		    padding: 0.3rem 0 0.3rem 0;
+		}
+		.list_right{
+			float: right;
+			background: url(../../images/bg_02.png) no-repeat;
+			background-size: cover;
+		    padding: 0.4rem 0.45rem;
+		}
+
+		.right_bg{
+			background: url(../../images/bg_03.png) no-repeat;
+			padding: 0.25rem 0.45rem;
+   			background-size: cover;
+		}
+
+		.right_bg02{
+			background: url(../../images/bg_04.png) no-repeat;
+   			background-size: cover;
+		}
+
+		.couponName{
+			font-weight: bold;
+		}
+
+		.couponEnd{
+			font-size: 0.2rem;
+			line-height: 0.6rem;
+		}
+
+		.btn_get{
+			color: #fff;
+		}
+
+
+
+		
+		.layui-m-layercont{
+			padding: 0;
+		}
+
+		.layui-m-layercont img,.layui-m-layersection{
+			border-radius: 10px;
+		}
+
+		.layui-m-layerbtn{
+			background: #fd3511;
+			border-radius: 50px;
+			margin: 0.3rem auto;
+			width: 60%;
+		}
+
+		.layui-m-layerbtn span[yes]{
+			color: #fff;
+			font-size: 0.4rem;
+		}
+
+		.layui-m-layerbtn{
+			height: 45px;
+			line-height: 45px;
+		}
+	</style>
+</head>
+<body>
+<dic class="container">
+	<div class="slide_box">
+		<!-- banner -->
+		<div class="slide" id="slid">
+		    <a href="###">
+		    	<img src="../../images/j_01.png" alt="">
+		    </a>
+		</div>
+		<!-- banner -->
+
+		<!-- header -->
+		<div class="header">
+			<div class="back">
+				<i class="icon iconfont down">&#xe6dc;</i>
+			</div>
+
+			<div class="nav_list">
+				<a href="###" class="nav">领劵中心</a>
+			</div>
+		</div>
+		<!-- header -->
+	</div>
+
+	<!-- 搜索 -->
+	<div class="search_box">
+		<div class="search">
+			<div class="input_box">
+				<input type="text" placeholder="请输入优惠卷兑换码">
+			</div>
+			<div class="search_btn">
+				<!-- <a href="###">兑换</a> -->
+				<input type="button" value="兑换" />
+			</div>
+		</div>
+	</div>
+	<!-- 搜索 -->
+
+	<!-- 领取优惠卷 -->
+	<div class="lq_coupon">
+		<div class="war_tit">
+			<div class="conpon_tit">
+				<span>领取优惠卷</span>
+			</div>
+		</div>
+
+		<div class="conpon_call">
+			<div class="call_left">
+				<!-- <img src="../../images/bg_01.png" alt=""> -->
+			</div>
+			<div class="call_right"></div>
+		</div>
+	</div>
+	<!-- 领取优惠卷 -->
+
+	<div class="conenter">
+		<div class="conenter_list">
+			<a href="###" style="overflow: hidden;">
+				<div class="list_left">
+					<div class="couponNameArea">
+	                    <div class="couponName">体检服务优惠券</div>
+	                    <div class="couponEnd">有效期 : 至 2017-12-12</div>
+	                </div>
+	                <div class="couponPriceArea">
+	                    <div class="couponPrice"><span>¥</span>500</div>
+	                </div>
+				</div>
+				<div class="list_right">
+					<div class="couponBtnArea">
+	                    <span class="btn_get">领<br>取</span>
+	                </div>
+				</div>
+			</a>
+
+			<a href="###" style="overflow: hidden;">
+				<div class="list_left">
+					<div class="couponNameArea">
+	                    <div class="couponName">体检服务优惠券</div>
+	                    <div class="couponEnd">有效期 : 至 2017-12-12</div>
+	                </div>
+	                <div class="couponPriceArea">
+	                    <div class="couponPrice"><span>¥</span>500</div>
+	                </div>
+				</div>
+				<div class="list_right right_bg">
+					<div class="couponBtnArea">
+	                    <span class="btn_get">已<br/>领<br/>取</span>
+	                </div>
+				</div>
+			</a>
+
+			<a href="###" style="overflow: hidden;">
+				<div class="list_left">
+					<div class="couponNameArea">
+	                    <div class="couponName">体检服务优惠券</div>
+	                    <div class="couponEnd">有效期 : 至 2017-12-12</div>
+	                </div>
+	                <div class="couponPriceArea coup_color">
+	                    <div class="couponPrice"><span>¥</span>500</div>
+	                </div>
+				</div>
+				<div class="list_right right_bg02">
+					<div class="couponBtnArea">
+	                    <span class="btn_get">领<br/>取</span>
+	                </div>
+				</div>
+			</a>
+
+
+		</div>
+	</div>
+</div>	
+</body>
+</html>
+<script type="text/javascript">
+
+        /**
+         * 点击领取按钮触发事件
+         */
+        $(".btn_get").click(function(event) {
+
+            //信息框
+            layer.open({
+                content: "<img src='../../images/img_error.png' style='width:100%;'></img>"
+                ,btn: "确定"
+            });
+        });
+
+        
+
+
+        /**
+         * 点击兑换按钮触发事件
+         */
+        $(".search_btn").click(function(event) {
+            //信息框
+            layer.open({
+                content: "<img src='../../images/img_success.png' style='width:100%;'></img>"
+                ,btn: "确定"
+            });
+        });
+    </script>

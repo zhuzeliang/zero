@@ -1,0 +1,254 @@
+@charset "UTF-8";
+@import "reset";
+@import "mixins";
+@import  "variable";
+@import "iconfont/iconfont.css";
+@import  "swipeSlide";
+@import  "footer";
+@import  "welfare";
+@import  "_goods_service";
+html,body{
+	background:#f8f8f8;
+	width: 100%;
+	height:100%;
+}
+.container{
+	position: absolute;
+	top:0;
+	left:0;
+	right:0;
+	bottom:1.0rem;
+	overflow:auto;
+	-webkit-overflow-scrolling:touch;
+}
+.slide_box{
+	position: relative;
+}
+.search_box{
+	position:absolute;
+	width: 100%;
+	bottom:0.20rem;
+	@include flexbox;
+	@include vertical-layout(center);
+	@include box-sizing(border-box);
+	padding-right:0.20rem;
+	.city_box{
+		width: 1.0rem;
+		position: relative;
+		padding-right:0.30rem;
+		margin-right:0.30rem;
+		display:block;
+		color:#000;
+		line-height:1.3;
+		font-size:0.30rem;
+		.city{
+			@include clamp(1);
+			text-align:right;
+		}
+		.down{
+			position: absolute;
+            right:0;
+            display:block;
+            line-height: 0.30rem;
+            top:50%;
+            margin-top:-0.16rem;
+		}
+	}
+	.search{
+		@include flexbox;
+		@include flex(1);
+		@include border-radius(0.30rem);
+		@include vertical-layout(center);
+		@include border_1px;
+		border:1px solid #a7a8a6;
+		background: rgba(255,255,255,0.8);
+		// overflow:hidden;
+		.input_box{
+			@include flex(1);
+			input{
+				width: 100%;
+				line-height:1.3;
+				padding-top:0.12rem;
+				padding-bottom: 0.12rem;
+				// padding-left: 0.40rem;
+				@include box-sizing(border-box);
+				background: rgba(255,255,255,0);
+			}
+		}
+		.search_icon{
+			width: 0.80rem;
+			height: 100%;
+			text-align:center;
+			i{
+				font-size: 0.30rem;
+			}
+		}
+		.tab_box{
+			padding-right:0.30rem;
+			position:relative;
+			.tab_list{
+				@include border-radius(5px);
+				display:none;
+				position:absolute;
+				z-index: 60;
+				top:0.40rem;
+				left:50%;
+				margin-left:-0.85rem;
+				background:rgba(51,51,51,.8);
+				&::after{
+					content:"\200B";
+					position:absolute;
+					display:block;
+					width: 0;
+				    height: 0;
+				    border-left:4px solid transparent;
+				    border-right: 4px solid transparent;
+				    border-bottom: 4px solid rgba(51,51,51,.8);
+				    left:50%;
+				    top:-4px;
+				    z-index:70;
+				}
+				a{
+					color:#fff;
+					display:block;
+					line-height:0.54rem;
+					width:1.0rem;
+					text-align:center;
+					font-size:0.22rem;
+					&:first-child{
+						@include border_1px;
+						border-bottom-width:1px;
+					}
+				}
+			}
+		}
+	}
+}
+// #triangle-up {
+//     width: 0;
+//     height: 0;
+//     border-left: 50px solid transparent;
+//     border-right: 50px solid transparent;
+//     border-bottom: 100px solid red;
+// }
+.nav_list{
+	padding:0.20rem;
+	background:#fff;
+	p{
+		margin-top:0.10rem;
+		color:#595757;
+	}
+}
+.nav_list1{
+	@include flexbox;
+	.nav{
+		@include flexbox;
+		@include vertical;
+		@include flex(1);
+		@include vertical-layout(center);
+		@include horizontal-layout(center);
+		width: 0;
+		height: 1.54rem;
+		background:#f8f7f7;
+		margin-left:0.10rem;
+		margin-top: 0.10rem;
+		&:first-child{
+			margin-left:0;
+		}
+		img{
+			height: 0.86rem;
+		}
+		// &:nth-child(1) img{
+		// 	width: 0.70rem;
+		// 	height: 0.77rem;
+		// }
+		// &:nth-child(2) img{
+		// 	width: 0.62rem;
+		// 	height: 0.89rem;
+		// }
+		// &:nth-child(3) img{
+		// 	width: 0.69rem;
+		// 	height: 0.80rem;
+		// }
+		// &:nth-child(4) img{
+		// 	width: 0.85rem;
+		// 	height: 0.81rem;
+		// }
+	}
+	
+}
+.nav_list2{
+	@include flexbox;
+	.nav{
+		@include flexbox;
+		@include vertical;
+		@include flex(1);
+		@include vertical-layout(center);
+		@include horizontal-layout(center);
+		width: 0;
+		height: 1.54rem;
+		background:#f8f7f7;
+		margin-left:0.10rem;
+		margin-top: 0.10rem;
+		&:first-child{
+			margin-left:0;
+		}
+		img{
+			height: 0.86rem;
+		}
+	}
+	
+}
+
+// 标题样式
+.title{
+	@include flexbox;
+	margin-top:0.20rem;
+	height: 0.80rem;
+	@include border_1px;
+	@include horizontal-layout(justify);
+	@include vertical-layout(center);
+	background:#fff;
+	border-bottom-width: 1px;
+	border-top-width: 1px;
+	padding:0 0.20rem;
+	i{
+		color:$main_g;
+		font-size:0.40rem;
+		vertical-align: middle;
+	}
+	span{
+		vertical-align: middle;
+	}
+	a{
+		color:$main_g;
+		vertical-align: middle;
+	}
+}
+
+
+
+// 产品福利列表样式
+// .welfare_list{
+// 	padding:0.20rem;
+// }
+// .welfare{
+// 	color:#828282;
+// 	font-size:0.24rem;
+// 	display: block;
+// 	margin-bottom:0.30rem;
+// 	.top_img{
+// 		img{
+// 			width: 100%;
+// 			height: 3.56rem;
+// 		}
+// 	}
+// 	.bottom_txt{
+// 		@include flexbox;
+// 		@include horizontal-layout(justify);
+// 		line-height:1.3;
+// 		.time{
+// 			color:$main_r;
+// 		}
+// 	}
+// }

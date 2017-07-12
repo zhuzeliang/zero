@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>我的服务</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta content="yes" name="apple-mobile-web-app-capable" />
+    <meta content="black" name="apple-mobile-web-app-status-bar-style" />
+    <meta content="telephone=no" name="format-detection" />
+    <meta content="email=no" name="format-detection" />
+    <link rel="stylesheet" href="../../css/my_service_detail.css">
+    <script src="../../js/rem.js"></script>
+</head>
+<body onload="loadFun();">
+  <!-- 页面加载中start -->
+  <div class="my_loading">
+    <img src="../../images/gaox.gif" alt="">
+  </div>
+  <!-- 页面加载中end -->
+	<!-- 头部 start-->
+    <div class="header">
+        <header>
+            <div class="back" onclick="history.go(-1);">
+                <i class="icon iconfont down">&#xe6dc;</i>
+            </div>
+            <div class="nav_list">
+                <a href="###" class="nav">我的服务</a>
+            </div>
+        </header>
+    </div>
+    <!-- 头部 end-->
+   <div class="container">
+       
+       <div class="order_detail">
+           <div class="line">
+               <label for="">订单号：</label>
+               <span>21234567890000</span>
+           </div>
+            <div class="line">
+               <label for="">下单时间：</label>
+               <span>2016-02-27  8:0:00</span>
+           </div>
+            <div class="line">
+               <label for="">订单金额：</label>
+               <span><i class="icon iconfont">&#xe645;</i>665</span>
+           </div>
+            <div class="line">
+               <label for="">优惠金额：</label>
+               <span><i class="icon iconfont">&#xe645;</i>65</span>
+           </div>
+            <div class="line">
+               <label for="">实付金额：</label>
+               <span><i class="icon iconfont">&#xe645;</i>600</span>
+           </div>
+            <div class="line">
+               <label for="">订单状态：</label>
+               <span>已使用</span>
+           </div>
+       </div>
+
+       <div class="order_info">
+           <div class="info">
+               <div class="left">
+                   <label for="">服务名称：</label>
+                   <span>亲子互动益智套餐</span>
+               </div>
+               <div class="right">
+                   <i class="icon iconfont">&#xe79a;</i>
+                   <span>已预约</span>
+               </div>
+           </div>
+            <div class="info">
+               <div class="left">
+                   <label for="">预约时间：</label>
+                   <span>2016-02-27 8:00</span>
+               </div>
+           </div>
+            <div class="info">
+               <div class="left">
+                   <label for="">体检时间：</label>
+                   <span>2016-02-27</span>
+                   <span class="tip">(使用前72小时可申请改约)</span>
+                    <!-- 是否可编辑 -->
+                     <a href="../order/service_append.html" class="edit"><i class="icon iconfont">&#xe611;</i></a>
+                  <!--  <a href="###" class="no_edit"><i class="icon iconfont">&#xe611;</i></a> -->
+               </div>
+           </div>
+              <div class="info">
+               <div class="left">
+                   <label for="">预约门店：</label>
+                   <span>成长中心徐家汇店</span>
+               </div>
+           </div>
+       </div>
+   </div>
+</body>
+</html>
+<script src="../../js/jquery-2.1.4.min.js"></script>

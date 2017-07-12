@@ -1,0 +1,83 @@
+@charset "UTF-8";
+@import "reset";
+@import "mixins";
+@import  "variable";
+@import  "header2";
+@import  "footer";
+@import "iconfont/iconfont.css";
+html,body{
+	background:#f8f8f8;
+	width: 100%;
+	height: 100%;
+}
+.container{
+	position: absolute;
+	left:0;
+	right:0;
+	top:1.0rem;
+	bottom:1.0rem;
+	overflow:auto;
+	-webkit-overflow-scrolling:touch;
+}
+
+.key_box{
+	text-align: center;
+	h3{
+		padding:0.30rem;
+	}
+	.input_list{
+		.input_box{
+			display:inline-block;
+		}
+		.add_bg{
+			position: relative;
+			background:#fff;
+			z-index: 3;
+			&::after{
+				content:"\200B";
+				position: absolute;
+				display:block;
+				width: 0.28rem;
+				height: 0.27rem;
+				background:url("../images/xing.png") no-repeat center center;
+				background-size:100% 100%;
+				left:50%;
+				top:50%;
+				margin-left:-0.14rem;
+				margin-top:-0.14rem;
+			}
+		}
+		input{
+			@include border_1px;
+			@include box-sizing(borer-box);
+			border-width:1px;
+			width: 0.50rem;
+			height: 0.40rem;
+			padding:0.20rem;
+			text-align:center;
+			font-size:0.45rem;
+		}
+	}
+	.reset_box{
+		margin-bottom: 0.20rem;
+		input:first-child{
+			@include border_1px;
+			width: 3.0rem;
+			line-height:1.2;
+			padding:0.20rem;
+			border-width:1px;
+			text-align:center;
+		}
+		input[type="button"]{
+			line-height:1.2;
+			padding:0.20rem;
+			background:$main_g;
+			color:#fff;
+		}
+	}
+	.tip{
+		color:$main_r;
+		padding:0.20rem;
+	}
+}
+

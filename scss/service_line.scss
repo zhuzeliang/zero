@@ -1,0 +1,159 @@
+@charset "UTF-8";
+@import "reset";
+@import "mixins";
+@import  "variable";
+@import "iconfont/iconfont.css";
+.header{
+    @include border_1px;
+    border-bottom-width:1px;
+    position:fixed;
+    top:0;
+    left:0;
+    width: 100%;
+    background: #fff;
+    z-index: 2;
+}
+header{
+    @include flexbox;
+    @include vertical-layout(center);
+    position: relative;
+    height: 1.0rem;
+    padding:0 0.20rem;
+    .back{
+        font-size:0.46rem;
+        width: 0.50rem;
+        color:#000;
+    }
+    .nav_list{
+        @include flex(1);
+        text-align:center;
+        margin-left:-0.50rem;
+        .nav{
+            display:inline-block;
+            padding:0 0.40rem;
+            font-size:0.30rem;
+            color:#000;
+            font-weight:bold;
+            &.current{
+                color:$main_g;
+            }
+        }
+    }
+}
+.container{
+	padding-top: 1.0rem;
+	padding-bottom: 1.0rem;
+}
+.footer{
+	@include border_1px;
+	position:fixed;
+	bottom:0;
+	left:0;
+	width: 100%;
+	border-top-width:1px;
+	z-index: 2;
+	background: #fff;
+}
+footer{
+	@include flexbox;
+	@include vertical-layout(center);
+	height: 1.0rem;
+	padding:0 0.20rem;
+	color:#828282;
+	.face_box{
+		@include flexbox;
+		label{
+			display:block;
+			margin-right:0.10rem;
+		}
+		img{
+			width: 0.44rem;
+			height: 0.44rem;
+		}
+	}
+	.input_box{
+		@include flex(1);
+		@include border-radius(5px);
+		border:1px solid #cccccc;
+		position: relative;
+		padding:1px 0.60rem 1px 2px;
+		margin-left:0.10rem;
+		input{
+			@include box-sizing(border-box);
+			line-height: 1.2;
+			padding:0.16rem;
+			width: 100%;
+		}
+		.enter{
+			position: absolute;
+			right:0.20rem;
+			top:50%;
+			margin-top:-0.22rem;
+			img{
+				width: 0.43rem;
+				height: 0.43rem;
+			}
+		}
+	}
+}
+
+
+.dialog{
+	padding:0.20rem;
+	line-height:1.28;
+	.time{
+		padding:0.30rem 0;
+		text-align:center;
+		color:#828282;
+		font-size:0.24rem;
+	}
+}
+.req_box{
+	@include flexbox;
+	margin-bottom: 0.30rem;
+	.head_img{
+		@include border-radius(50%);
+		width: 0.80rem;
+		height: 0.80rem;
+		margin-right: 0.20rem;
+	}
+	.txt{
+		@include border-radius(0.10rem);
+		padding:0.20rem;
+		background:#e7e6ec;
+		margin-top:0.10rem;
+	}
+	.name{
+		color:#828282;
+	}
+	.right{
+		@include flex(1);
+		padding-right:2.0rem;
+	}
+}
+.res_box{
+	@include flexbox;
+	@include horizontal-layout(end);
+	margin-bottom: 0.30rem;
+	.head_img{
+		@include border-radius(50%);
+		width: 0.80rem;
+		height: 0.80rem;
+		margin-left: 0.20rem;
+	}
+	.name{
+		color:#828282;
+		text-align:right;
+	}
+	.txt{
+		@include border-radius(0.10rem);
+		padding:0.20rem;
+		background:$main_g;
+		color:#fff;
+		margin-top:0.10rem;
+	}
+	.right{
+		@include flex(1);
+		padding-left:2.0rem;
+	}
+}

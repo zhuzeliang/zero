@@ -1,0 +1,52 @@
+@charset "UTF-8";
+@import "reset";
+@import "mixins";
+@import  "variable";
+@import  "header2";
+@import  "form";
+@import  "footer";
+@import "iconfont/iconfont.css";
+html,body{
+	background:#f8f8f8;
+	width: 100%;
+	height: 100%;
+}
+.container{
+	position: absolute;
+	left:0;
+	right:0;
+	top:1.0rem;
+	bottom:1.0rem;
+	overflow:auto;
+	-webkit-overflow-scrolling:touch;
+}
+
+.form_box{
+	margin-top:0;
+	h3{
+		line-height:0.80rem;
+		padding: 0 0.20rem;
+	}
+	.input_module{
+		select{
+			padding-left: 0;
+		}
+		input{
+			padding-left: 0;
+		}
+		.dou{
+			color:$main_y;
+			padding-left:0.20rem;
+		}
+		.money{
+			color:$main_y;
+		}
+		.cash{
+			color:#828282;
+		}
+	}
+}
+.tip{
+	color:#828282;
+	padding:0.20rem;
+}

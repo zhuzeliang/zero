@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+    <title>我的趣豆</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta content="yes" name="apple-mobile-web-app-capable" />
+    <meta content="black" name="apple-mobile-web-app-status-bar-style" />
+    <meta content="telephone=no" name="format-detection" />
+    <meta content="email=no" name="format-detection" />
+    <link rel="stylesheet" href="../../css/my_dou.css">
+    <script src="../../js/rem.js"></script>
+</head>
+<body onload="loadFun();">
+  <!-- 页面加载中start -->
+  <div class="my_loading">
+    <img src="../../images/gaox.gif" alt="">
+  </div>
+  <!-- 页面加载中end -->	<!-- 头部 start-->
+  <div class="header">
+      <header>
+          <div class="back" onclick="history.go(-1);">
+              <i class="icon iconfont down">&#xe6dc;</i>
+          </div>
+          <div class="nav_list">
+              <a href="###" class="nav">我的趣豆</a>
+          </div>
+      </header>
+  </div>
+    <!-- 头部 end-->
+
+   <!-- content start -->
+  <div class="container">
+      <div class="surplus_box">
+        <div class="surplus">
+          <label for="">我的余豆</label>
+          <span class="dou"><i class="icon iconfont down">&#xe645;</i>668</span>
+          <span class="cash">(300可提现)</span>
+        </div>
+        <div class="link_box">
+          <a href="withdraw_cash.html"><i class="icon iconfont down">&#xe6db;</i> 提现</a>
+          <a href="recharge.html" class="recharge"><i class="icon iconfont down">&#xe645;</i> 充值</a>
+        </div>
+      </div>
+
+      <!-- 趣豆消费明细start -->
+      <div class="title">
+        <h3>趣豆消费明细</h3>
+      </div>
+      <div class="dou_list">
+        <div class="dou_box">
+          <div class="left_box">
+            <div class="left">
+              <p class="recharge">充值</p>
+              <p>2016-12-02</p>
+            </div>
+            <div class="center">
+              <span class="dou_num">+1000</span>
+              <span>(余豆1200)</span>
+            </div>
+          </div>
+          <div class="right_box">
+
+            <!-- 已完成 -->
+           <!--  <div class="over">
+              <i class="icon iconfont down">&#xe7be;</i>
+              <span>已完成</span>
+            </div> -->
+           <!--  待审核 -->
+           <div class="wait">
+              <i class="icon iconfont down">&#xe79a;</i>
+              <span>待审核</span>
+            </div>
+          </div>
+        </div>
+        <div class="dou_box">
+          <div class="left_box">
+            <div class="left">
+              <p class="cash">消费</p>
+              <p>2016-12-02</p>
+            </div>
+            <div class="center">
+              <span class="dou_num">+1000</span>
+              <span>(余豆1200)</span>
+            </div>
+          </div>
+          <div class="right_box">
+               <!-- 已完成 -->
+              <div class="over">
+                <i class="icon iconfont down">&#xe7be;</i>
+                <span>已完成</span>
+              </div>
+             <!--  待审核 -->
+            <!--  <div class="wait">
+                <i class="icon iconfont down">&#xe79a;</i>
+                <span>待审核</span>
+              </div> -->
+            </div>
+          </div>
+        </div>
+        <div class="dou_box">
+          <div class="left_box">
+            <div class="left">
+              <p class="cash">提现</p>
+              <p>2016-12-02</p>
+            </div>
+            <div class="center">
+              <span class="dou_num">+1000</span>
+              <span>(余豆1200)</span>
+            </div>
+          </div>
+          <div class="right_box">
+              <!-- 已完成 -->
+             <!--  <div class="over">
+                <i class="icon iconfont down">&#xe7be;</i>
+                <span>已完成</span>
+              </div> -->
+             <!--  待审核 -->
+             <div class="wait">
+                <i class="icon iconfont down">&#xe79a;</i>
+                <span>待审核</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- 趣豆消费明细end -->
+  </div>
+    <!--  content end -->
+</body>
+</html>
+<script src="../../js/jquery-2.1.4.min.js"></script>

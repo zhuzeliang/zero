@@ -1,0 +1,161 @@
+@charset "UTF-8";
+@import "reset";
+@import "mixins";
+@import  "variable";
+@import  "header2";
+@import "iconfont/iconfont.css";
+html,body{
+	width: 100%;
+	height: 100%;
+}
+.container{
+	position: absolute;
+	top:1.0rem;
+	bottom: 0;
+	left:0;
+	right:0;
+	overflow:auto;
+	-webkit-overflow-scrolling:touch;
+}
+
+.line{
+	@include flexbox;
+	@include vertical-layout(center);
+	@include border_1px;
+	border-bottom-width:1px;
+	padding:0.20rem;
+	i{
+		color:$main_y;
+		display:inline-block;
+		margin-right: 0.10rem;
+	}
+}
+.order_num{
+	@include border_1px;
+	border-bottom-width:1px;
+	margin-top:0.20rem;
+	background:#fff;
+	font-size:0.24rem;
+	line-height:1.20;
+	color:#828282;
+}
+
+.order_info{
+	padding:0.20rem 0;
+}
+.info{
+	@include flexbox;
+	padding:0.10rem 0.20rem;
+	color:#828282;
+	.tip{
+		text-decoration:underline;
+	}
+	.right{
+		i{
+			font-size:0.32rem;
+			vertical-align:middle;
+		}
+	}
+	.left{
+		@include flex(1);
+	}
+	span{
+		vertical-align:middle;
+	}
+	.edit{
+		color:$main_g;
+		font-size:0.36rem;
+		vertical-align:middle;
+	}
+	.no_edit{
+		color:#c1c1c1;
+		font-size:0.36rem;
+		vertical-align:#c1c1c1;
+		vertical-align:middle;
+	}
+}
+
+
+.goods_list{
+	padding:0.20rem;
+	position: relative;
+	margin-top:0.20rem;
+	&::before{
+		content:"\200B";
+		display:block;
+		position: absolute;
+		left:0.20rem;
+		top:0;
+		height: 100%;
+		width:0.06rem;
+		background:$main_g;
+	}
+}
+.goods{
+	padding-left: 0.20rem;
+	color:#828282;
+	line-height:1.2;
+	margin-bottom:0.20rem;
+	font-size:0.24rem;
+	.type{
+		@include flexbox;
+		@include horizontal-layout(justify);
+		position: relative;
+		margin-bottom: 0.10rem;
+		.wait{
+			color:$main_g;
+		}
+		&::after{
+			content:"\200B";
+			display:block;
+			position: absolute;
+			width: 0.14rem;
+			height:0.32rem;
+			background:#fff;
+			z-index: 100;
+			top:0;
+			left:-0.22rem;
+		}
+		&::before{
+			@include border-radius(100%);
+			content:"\200B";
+			display:block;
+			position: absolute;
+			width: 0.08rem;
+			height:0.08rem;
+			background:$main_g;
+			z-index: 1000;
+			top:50%;
+			margin-top: -0.05rem;
+			left:-0.212rem;
+		}
+		h3{
+			@include flex(1);
+			font-size:0.28rem;
+			margin-right:0.20rem;
+			color:#000;
+		}
+		i{
+			margin-right:0.10rem;
+			font-size:0.32rem;
+			vertical-align:middle;
+		}
+		span{
+			vertical-align:middle;
+		}
+	}
+	.cell{
+		margin-top:0.10rem;
+	}
+	.edit{
+		color:$main_g;
+		font-size:0.36rem;
+		vertical-align:middle;
+	}
+	.no_edit{
+		color:#c1c1c1;
+		font-size:0.36rem;
+		vertical-align:#c1c1c1;
+		vertical-align:middle;
+	}
+}

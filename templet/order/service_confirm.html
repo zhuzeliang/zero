@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta content="yes" name="apple-mobile-web-app-capable" />
+    <meta content="black" name="apple-mobile-web-app-status-bar-style" />
+    <meta content="telephone=no" name="format-detection" />
+    <meta content="email=no" name="format-detection" />
+    <link rel="stylesheet" href="../../css/service_confirm.css">
+    <title>服务确认</title>
+    <script src="../../js/rem.js"></script>
+</head>
+<body onload="loadFun();">
+    <!-- 页面加载中start -->
+    <div class="my_loading">
+        <img src="../../images/gaox.gif" alt="">
+    </div>
+    <!-- 页面加载中end -->	<!-- 头部 start-->
+    <div class="header">
+        <header>
+            <div class="back" onclick="history.go(-1);">
+                <i class="icon iconfont down">&#xe6dc;</i>
+            </div>
+            <div class="nav_list">
+                <a href="###" class="nav">服务确认</a>
+            </div>
+        </header>
+    </div>
+    <!-- 头部 end-->
+   <div class="container">
+        <h3><label for="">订单号：</label><span>12345678995</span></h3>
+        <div class="order_detail">
+          <p class="cell">
+            <label for="">商品名:</label>
+            <span>亲子互动益智套餐</span>
+          </p>
+          <p class="cell">
+            <label for="">价格:</label>
+            <span class="money">¥1000.0</span>
+          </p>
+          <p class="cell">
+            <label for="">趣豆价:</label>
+            <span class="dou"><i class="icon iconfont down">&#xe645;</i>90</span>
+          </p>
+        </div>
+       <!-- 支付方式start -->
+        <h3>支付方式</h3>
+        <div class="pay_type">
+            <label for="radio1" class="pay" onclick="fun1();">
+                <div class="left">
+                    <img src="../../images/dou.png" alt="">
+                    <span>趣豆支付(余豆<em class="dou_num">9999</em>)</span>
+                </div>
+                <div class="right">
+                    <div class="check_box">
+                        <input type="radio" id="radio1" name="pay" class="dou_pay">
+                        <div class="switch"></div>
+                    </div>
+                </div>
+            </label>
+            <label for="radio2" class="pay pay_check">
+                <div class="left">
+                    <img src="../../images/wechat.png" alt="" >
+                    <span>微信支付</span>
+                </div>
+                <div class="right">
+                    <div class="check_box">
+                        <input type="radio" id="radio2" name="pay" checked class="money_pay">
+                        <div class="switch"></div>
+                    </div>
+                </div>
+            </label>
+            <label for="radio3" class="pay pay_check">
+                <div class="left">
+                    <img src="../../images/apipay.png" alt="">
+                    <span>支付宝支付</span>
+                </div>
+                <div class="right">
+                    <div class="check_box">
+                        <input type="radio" id="radio3" name="pay" class="money_pay">
+                        <div class="switch"></div>
+                    </div>
+                </div>
+            </label>
+        </div>
+        <!-- 支付方式end-->
+
+
+        <h3>优惠劵</h3>
+        <a href="coupon.html" class="line">
+          <div class="left">
+            可用优惠劵(<span class="discount_num">8</span>)
+          </div>
+          <div class="right">
+            开学大酬宾<i class="icon iconfont down">&#xe6da;</i>
+          </div>
+        </a>
+        <!-- 钱支付 -->
+        <div class="pay_info">
+          <p>
+            <label for="">订单金额：</label>
+            <span>¥88.8</span>
+          </p>
+           <p>
+            <label for="">优惠劵：</label>
+            <span>-¥88.8</span>
+          </p>
+           <p>
+            <label for="">趣豆折扣：</label>
+            <span>-¥88.8</span>
+          </p>
+           <p>
+            <label for="">实际支付：</label>
+            <span>¥88.8</span>
+          </p>
+        </div>
+        <!-- 趣豆支付 -->
+        <div class="pay_info pay_doou_box" style="display: none;">
+          <p>
+            <label for="">订单金额：</label>
+            <span class="dou">88.8<i class="icon iconfont down">&#xe645;</i></span>
+          </p>
+           <p>
+            <label for="">优惠劵：</label>
+            <span class="dou">-88.8<i class="icon iconfont down">&#xe645;</i></span>
+          </p>
+           <p>
+            <label for="">实际支付：</label>
+            <span class="dou">88.8<i class="icon iconfont down">&#xe645;</i></span>
+          </p>
+        </div>
+
+      </div>
+
+     <!-- 底部导航start -->
+    <div class="footer">
+        <footer>
+            <a href="pay_finish.html" class="pay">
+                <span>立即支付</span>
+            </a>
+        </footer>
+    </div>
+    <!-- 底部导航end -->
+</body>
+</html>
+<script src="../../js/jquery-2.1.4.min.js"></script>
+<script src="../../js/layer.js"></script>
+<script>
+    // 趣豆支付切换
+    $(".dou_pay").on("change",function(){
+        if($(this).prop("checked")){
+             $(".pay_doou_box").show().siblings('.pay_info').hide();
+        }
+    });
+     $(".money_pay").on("change",function(){
+        if($(this).prop("checked")){
+            $(".pay_doou_box").hide().siblings('.pay_info').show();
+        }
+    });
+
+      //趣豆不足提示方法
+    function fun1(){
+        var html='<p style="text-align:center;">趣豆不够哦，请去充值~</p>';
+        layer.open({
+            content: html,
+            btn: ['去充值', '取消'],
+            yes:function(){
+                //去充值事件
+                window.location.href="http://baidu.com";
+            }
+        });
+    }
+
+      //趣豆支付未设置安全锁
+    function fun2(){
+        var html='<p style="text-align:center;">为保证您的账户安全</p>'+'<p style="text-align:center;">请设置趣豆支付安全锁</p>';
+        layer.open({
+            content: html,
+            btn: ['去设置', '取消'],
+            yes:function(){
+                //去设置事件
+                window.location.href="http://baidu.com";
+            }
+        });
+    }
+</script>

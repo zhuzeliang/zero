@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>设置安全锁</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta content="yes" name="apple-mobile-web-app-capable" />
+    <meta content="black" name="apple-mobile-web-app-status-bar-style" />
+    <meta content="telephone=no" name="format-detection" />
+    <meta content="email=no" name="format-detection" />
+    <link rel="stylesheet" href="../../css/key.css">
+    <script src="../../js/rem.js"></script>
+</head>
+<body onload="loadFun();">
+    <!-- 页面加载中start -->
+    <div class="my_loading">
+        <img src="../../images/gaox.gif" alt="">
+    </div>
+    <!-- 页面加载中end -->
+	<!-- 头部 start-->
+    <div class="header">
+        <header>
+            <div class="back" onclick="history.go(-1);">
+                <i class="icon iconfont down">&#xe6dc;</i>
+            </div>
+            <div class="nav_list">
+                <a href="###" class="nav">设置安全锁</a>
+            </div>
+        </header>
+    </div>
+    <!-- 头部 end-->
+	<div class="container">
+        <div class="key_box">
+            <h3>请输入6位数</h3>
+            <!-- input输入规则不知道 -->
+             <div class="reset_box">
+                <input type="password"  autocomplete="off" placeholder="请输入您的安全锁">
+            </div>
+            <h3>请再次输入6位数</h3>
+             <div class="reset_box">
+                <input type="password"  autocomplete="off" placeholder="请确认您的安全锁">
+            </div>
+            <p class="tip">*两次输入不一致</p>
+        </div>
+
+	</div>
+
+    <!-- 底部导航start -->
+    <div class="footer">
+        <footer>
+            <a href="###" class="pay" onclick="fun1()">
+                <span>确定</span>
+            </a>
+        </footer>
+    </div>
+    <!-- 底部导航end -->
+</body>
+</html>
+<script src="../../js/jquery-2.1.4.min.js"></script>
+<script src="../../js/layer.js"></script>
+<script>
+    //询问框
+    function fun1(){
+        var html='<p style="text-align:center;">设置成功</p>';
+        layer.open({
+            content: html,
+            btn: ['确定'],
+            yes:function(){
+                // 点是事件
+                window.location.href="../homepage/user.html";
+            }
+        });
+    }
+
+</script>

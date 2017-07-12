@@ -1,0 +1,42 @@
+@charset "UTF-8";
+@import "reset";
+@import "mixins";
+@import  "variable";
+@import  "header2";
+@import  "footer";
+@import "iconfont/iconfont.css";
+html,body{
+	background:#f8f8f8;
+	width: 100%;
+	height: 100%;
+}
+.container{
+	position: absolute;
+	left:0;
+	right:0;
+	top:1.0rem;
+	bottom:1.0rem;
+	overflow:auto;
+	-webkit-overflow-scrolling:touch;
+}
+
+
+.tips{
+	padding: 0.20rem;
+	line-height:1.3;
+}
+
+.cell{
+	@include border_1px;
+	border-bottom-width: 1px;
+	padding:0.20rem;
+	background:#fff;
+	.money{
+		color:$main_r;
+	}
+	.dou{
+		i{
+			color:$main_y;
+		}
+	}
+}

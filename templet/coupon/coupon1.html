@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta content="yes" name="apple-mobile-web-app-capable" />
+    <meta content="black" name="apple-mobile-web-app-status-bar-style" />
+    <meta content="telephone=no" name="format-detection" />
+    <meta content="email=no" name="format-detection" />
+    <link rel="stylesheet" href="../../css/coupon.css">
+    <script src="../../js/rem.js"></script>
+	<title>领卷中心</title>
+</head>
+<style>
+    .layui-m-layer0 .layui-m-layerchild{
+        width: 5.80rem!important;
+        padding-bottom: 0.20rem;
+    }
+    .layui-m-layercont{
+        padding: 0!important;
+    }
+</style>
+<body onload="loadFun();">
+    <!-- 页面加载中start -->
+    <div class="my_loading">
+        <img src="../../images/gaox.gif" alt="">
+    </div>
+    <!-- 页面加载中end -->
+	<!-- 头部 start-->
+    <div class="header1">
+        <div class="top_header">
+            <div class="back" onclick="history.go(-1);">
+                <i class="icon iconfont down">&#xe6dc;</i>
+            </div>
+            <div class="nav_list">
+                <a href="###" class="nav">领劵中心</a>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="content">
+    	<div class="banner">
+            <img src="../../images/j_01.png" alt="">
+        </div>
+
+        <div class="change_box">
+            <div class="input_box">
+                <input type="text" placeholder="请输入优惠劵兑换码">
+            </div>
+            <span class="btn">兑换</span>
+        </div>
+         <div class="line_box">
+            <div class="line"></div>
+            <span>领取优惠劵</span>
+            <div class="line"></div>
+        </div>
+         <div class="coupon_list">
+            <!-- 现金 -->
+           <a href="###" class="coupon receive" onclick="fun1();">
+                <div class="left">
+                    <h3>亲子服务优惠劵</h3>
+                    <h4><label for="">有效期：</label><span>至2017-6-20</span></h4>
+                </div>
+                <div class="right">
+                    <p class="money">
+                        <span><em>¥ </em>500</span>
+                    </p>
+                </div>
+           </a>
+            <!-- 现金 -->
+           <a href="###" class="coupon received"  onclick="fun1();">
+                <div class="left">
+                    <h3>宠物服务优惠劵</h3>
+                    <h4><label for="">有效期：</label><span>至2017-6-20</span></h4>
+                </div>
+                <div class="right">
+                    <p class="money">
+                        <span><em>¥ </em>500</span>
+                    </p>
+                </div>
+           </a>
+           <a href="###" class="coupon receive_dou"  onclick="fun2();">
+                <div class="left">
+                    <h3>亲子服务优惠劵</h3>
+                    <h4><label for="">有效期：</label><span>至2017-6-20</span></h4>
+                </div>
+                 <div class="right">
+                    <p class="dou">
+                        <i class="icon iconfont down">&#xe645; </i><span>500</span>
+                    </p>
+                </div>
+           </a>
+
+       </div>
+    </div>
+    <!-- 头部 end-->
+</body>
+</html>
+<script src="../../js/jquery-2.1.4.min.js"></script>
+<script src="../../js/layer.js"></script>
+<script>
+    // 领取成功调用方法
+    function fun1(){
+         var html="<img src='../../images/img_success.png' style='width:5.80rem;height:3.87rem;'/>"+
+                        "<div onclick='layer.closeAll();' class='confirm' style='background:#fe5c42;width: 4.0rem;margin:0.20rem auto 0 auto;text-align:center;color:#fff;line-height:2.5;border-radius:0.50rem;'>确定</div>";
+         layer.open({
+                content: html
+
+         });
+    }
+     // 领取失败调用方法
+     function fun2(){
+         var html="<img src='../../images/img_error.png' style='width:5.80rem;height:3.87rem;'/>"+
+                        "<div onclick='layer.closeAll();' class='confirm' style='background:#fe5c42;width: 4.0rem;margin:0.20rem auto 0 auto;text-align:center;color:#fff;line-height:2.5;border-radius:0.50rem;'>确定</div>";
+         layer.open({
+                content: html,
+         });
+    }
+</script>
+
+

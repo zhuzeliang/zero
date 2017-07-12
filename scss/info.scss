@@ -1,0 +1,77 @@
+@charset "UTF-8";
+@import "reset";
+@import "mixins";
+@import  "variable";
+@import  "header2";
+@import  "form";
+@import "iconfont/iconfont.css";
+html,body{
+	background:#f8f8f8;
+	width: 100%;
+	height: 100%;
+}
+.container{
+	position: absolute;
+	left:0;
+	right:0;
+	top:1.0rem;
+	bottom:0;
+	overflow:auto;
+	-webkit-overflow-scrolling:touch;
+}
+.info_list{
+	padding: 0 0.32rem;
+}
+.info_box{
+	.date_box{
+		text-align:center;
+		padding:0.23rem;
+		.date{
+			@include border-radius(4px);
+			display:inline-block;
+			line-height:0.34rem;
+			height: 0.34rem;
+			padding-top: 1px;
+			font-size:0.20rem;
+			background:#bebebe;
+			color:#fff;
+			width: 1.75rem;
+		}
+	}
+	.info{
+		@include border-radius(10px);
+		background:#fff;
+		font-size:0.24rem;
+		line-height:1.428;
+		h3{
+			font-size:0.28rem;
+			padding-left:0.20rem;
+			padding-right: 0.20rem;
+			padding-top:0.20rem;
+			&.order_pay{
+				color:#8579ff;
+			}
+			&.service{
+				color:#fea331;
+			}
+			&.change{
+				color:#3fa9fb;
+			}
+			&.recommend{
+				color:#fe5657;
+			}
+		}
+		.detail{
+			padding:0.10rem 0.20rem 0.20rem 0.20rem;
+		}
+		.check{
+			@include border_1px;
+			@include flexbox;
+			@include horizontal-layout(justify);
+			padding:0.20rem;
+			color:#000;
+			font-size:0.24rem;
+			border-top-width:1px;
+		}
+	}
+}
